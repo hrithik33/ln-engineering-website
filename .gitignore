@@ -32,6 +32,12 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+
+# persistent local leads storage (prevent committing customer PII)
+data/*.jsonl
+!data/.gitkeep
+
 
 # vercel
 .vercel
@@ -39,3 +45,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# large raw archives exceeding GitHub 100MB limit (optimized version is included)
+public/documents/ln-engineering-catalogue.pdf
