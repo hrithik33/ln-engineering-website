@@ -31,6 +31,7 @@ export const company = {
 
   leadership: [
     {
+      slug: "ln-jangid",
       name: "MR. L. N. JANGID",
       role: "FOUNDER & CHAIRMAN",
       badge: "Founder & Chairman",
@@ -45,6 +46,7 @@ export const company = {
       ],
     },
     {
+      slug: "mayank-jangid",
       name: "MR. MAYANK JANGID",
       role: "DIRECTOR",
       badge: "Director",
@@ -59,6 +61,7 @@ export const company = {
       ],
     },
     {
+      slug: "manish-jangid",
       name: "MR. MANISH JANGID",
       role: "DIRECTOR",
       badge: "Director",

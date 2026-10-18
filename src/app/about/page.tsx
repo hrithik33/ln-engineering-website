@@ -208,12 +208,14 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* 3 Large White-Framed Portrait Cards in One Row on Desktop */}
+        {/* 3 Large White-Framed Portrait Cards in One Row on Desktop - Clickable Portfolios */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           {company.leadership.map((leader, idx) => (
-            <div
+            <Link
               key={leader.name}
-              className={`bg-white rounded-none border border-zinc-200/90 p-4 sm:p-5 pb-5 sm:pb-6 shadow-2xl flex flex-col justify-between group transition-all duration-300 hover:shadow-[0_24px_50px_rgba(255,255,255,0.08)] hover:-translate-y-1 ${
+              href={`/about/leadership/${leader.slug}`}
+              aria-label={`View detailed leadership portfolio for ${leader.name}, ${leader.role}`}
+              className={`bg-white rounded-none border border-zinc-200/90 p-4 sm:p-5 pb-5 sm:pb-6 shadow-2xl flex flex-col justify-between group transition-all duration-300 hover:shadow-[0_24px_50px_rgba(255,255,255,0.12)] hover:-translate-y-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EF4444] focus-visible:ring-offset-4 focus-visible:ring-offset-[#101112] ${
                 idx === 2 ? "md:col-span-2 md:max-w-md md:mx-auto lg:col-span-1 lg:max-w-none lg:mx-0 w-full" : "w-full"
               }`}
             >
@@ -227,12 +229,15 @@ export default function AboutPage() {
                   className="object-cover object-top motion-safe:group-hover:scale-105 motion-reduce:transform-none transition-transform duration-500 ease-out"
                   priority={idx === 0}
                 />
+                <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded text-[10px] font-mono text-white/90 opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-wider">
+                  View Profile &rarr;
+                </div>
               </div>
 
               {/* Information Panel: Name, Designation & Minimal Arrow */}
               <div className="pt-5 flex items-end justify-between gap-4">
                 <div className="space-y-1 min-w-0">
-                  <h3 className="font-serif tracking-wider text-base sm:text-lg font-bold text-zinc-950 uppercase leading-snug">
+                  <h3 className="font-serif tracking-wider text-base sm:text-lg font-bold text-zinc-950 uppercase leading-snug group-hover:text-[#C82032] transition-colors">
                     {leader.name}
                   </h3>
                   <p className="text-xs font-sans tracking-[0.16em] font-medium text-zinc-500 uppercase">
@@ -256,7 +261,7 @@ export default function AboutPage() {
                   </svg>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
