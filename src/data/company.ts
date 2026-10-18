@@ -31,11 +31,11 @@ export const company = {
 
   leadership: [
     {
-      name: "Mr. Laxmi Narayan Jangid",
-      role: "Founder & Director",
-      badge: "Founder & Visionary",
-      image: "/images/about/leaders/laxmi-narayan-jangid.webp",
-      imageAlt: "Mr. Laxmi Narayan Jangid, Founder and Director of LN Engineering",
+      name: "MR. L. N. JANGID",
+      role: "FOUNDER & CHAIRMAN",
+      badge: "Founder & Chairman",
+      image: "/images/about/leadership/mr-l-n-jangid.webp",
+      imageAlt: "Mr. L. N. Jangid, Founder and Chairman of LN Engineering",
       experience: "30+ Years Industry Experience (Active Since 1980)",
       bio: "Rich experience in stone processing machinery manufacturing since 1980. Spearheads core machine design, structural innovation, and executive governance. His hands-on engineering research has guided LN Engineering to manufacture and commission over 500+ heavy stone processing machines.",
       responsibilities: [
@@ -45,13 +45,13 @@ export const company = {
       ],
     },
     {
-      name: "Mr. Narendra Jangid",
-      role: "Technical & Production Head",
-      badge: "Production & Engineering",
-      image: "/images/about/leaders/narendra-jangid.webp",
-      imageAlt: "Mr. Narendra Jangid, Technical and Production Head at LN Engineering",
-      qualification: "B.E. Mechanical (Pune University, D.Y. Patil College)",
-      bio: "Graduated in Mechanical Engineering from Pune University (D.Y. Patil College). Combines strong technical knowledge with rigorous production oversight, managing heavy gantry fabrication, precision pillar alignment, vibration damping, and turnkey plant installation.",
+      name: "MR. MAYANK JANGID",
+      role: "DIRECTOR",
+      badge: "Director",
+      image: "/images/about/leadership/mr-mayank-jangid.webp",
+      imageAlt: "Mr. Mayank Jangid, Director at LN Engineering",
+      qualification: "B.E. Mechanical & Production Oversight",
+      bio: "Combines strong mechanical engineering expertise with rigorous production oversight, managing heavy gantry fabrication, precision pillar alignment, vibration damping, and turnkey plant commissioning.",
       responsibilities: [
         "Machinery Manufacturing & Heavy Fabrication",
         "Structural Alignment & Tolerance Inspection",
@@ -59,13 +59,13 @@ export const company = {
       ],
     },
     {
-      name: "Mr. Mahendra Jangid",
-      role: "Marketing & Commercial Head",
-      badge: "Techno-Commercial & Strategy",
-      image: "/images/about/leaders/mahendra-jangid.webp",
-      imageAlt: "Mr. Mahendra Jangid, Marketing and Commercial Head at LN Engineering",
-      qualification: "B.E. Mechanical & MBA",
-      bio: "Holds dual qualifications in Mechanical Engineering and Business Administration (MBA). Brings deep techno-commercial insight to natural stone processing, leading new product development, international client partnerships, and after-sales service operations.",
+      name: "MR. MANISH JANGID",
+      role: "DIRECTOR",
+      badge: "Director",
+      image: "/images/about/leadership/mr-manish-jangid.webp",
+      imageAlt: "Mr. Manish Jangid, Director at LN Engineering",
+      qualification: "B.E. Mechanical & Commercial Strategy",
+      bio: "Brings deep techno-commercial insight to natural stone processing, leading new product development, international client partnerships, and after-sales service operations.",
       responsibilities: [
         "New Machine Development & R&D Strategy",
         "Techno-Commercial Proposals & Customer Relations",
