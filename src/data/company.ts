@@ -15,17 +15,51 @@ export const company = {
   establishedDisplay: "Since 1994",
   timelineStartYear: "1993",
 
+  machinesManufactured: "500+",
+
   description:
     "LN Engineering (L N Machineries Pvt. Ltd.) is an established Indian manufacturer of high-precision stone-processing machinery based in Rajsamand, Rajasthan. Known as the 'Accuracy Master', LN Engineering designs and manufactures advanced Mono Wire Saw Machines, Multiwire Gangsaw Machines, CNC Wire Profile Machines, and Diamond Wire Rope for global quarry and stone-processing industries.",
 
   philosophy:
-    "Engineering precision with unwavering structural rigidity. Each machine undergoes stringent testing parameters and quality standards to deliver high productivity, minimum slurry waste, and optimum accuracy in marble, granite, and sandstone processing.",
+    "Engineering precision with uncompromising structural rigidity. Built on decades of applied mechanical research to deliver higher production throughput at reduced operational cost. Every structural component is calculated against tensile strength, compressive strength, toughness, and hardness with high industrial safety factors, ensuring vibration-free cutting, planar slab yield, and minimal kerf loss across granite, marble, sandstone, basalt, and feldspar.",
 
   vision:
-    "To provide state-of-the-art stone processing machinery globally, positioning Indian precision engineering as the benchmark in stone and wire technology worldwide.",
+    "To be the most trustworthy global benchmark in stone block cutting, handling, and wire sawing technology, positioning Indian precision engineering at the forefront of the international natural stone industry.",
 
   mission:
-    "To consistently innovate indigenous, customized stone-processing solutions that enhance production capacity, reliability, and profitability for stone entrepreneurs across domestic and international markets.",
+    "To deliver minimum load with maximum cutting efficiency, providing stone processing facilities with higher slab yields, reduced power consumption, dependable long-term durability, and maximum return on investment.",
+
+  leadership: [
+    {
+      name: "Mr. Laxmi Narayan Jangid",
+      role: "Founder & Director",
+      experience: "30+ years in stone processing machinery manufacturing; 500+ machines manufactured.",
+      focus: "Machine design, structural integrity, and core innovation.",
+    },
+    {
+      name: "Mr. Narendra Jangid",
+      role: "Technical & Production Head",
+      qualification: "B.E. Mechanical (Pune University, D.Y. Patil College)",
+      focus: "Precision manufacturing, heavy gantry fabrication, structural alignment, and field installation.",
+    },
+    {
+      name: "Mr. Mahendra Jangid",
+      role: "Marketing & Techno-Commercial Head",
+      qualification: "B.E. Mechanical & MBA",
+      focus: "Product development, international stone market strategy, and customer relationships.",
+    },
+  ],
+
+  vendors: [
+    "Siemens",
+    "Schneider Electric",
+    "NTN Bearings",
+    "FAG",
+    "PMI Linear Motion",
+    "Crompton Greaves",
+    "Elecon",
+    "Greaves",
+  ],
 
   address: {
     street: "N. H. 8, Mokhampura",

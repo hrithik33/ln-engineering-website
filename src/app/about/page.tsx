@@ -20,7 +20,7 @@ export const metadata: Metadata = {
       "30+ years of precision stone machinery manufacturing, verified ZED certifications, and global export reach.",
     url: "https://www.gangsawmachines.com/about",
     siteName: "LN Engineering",
-    images: ["/images/factory/plant-workforce.jpg"],
+    images: ["/images/about/precision-stone-processing-machine.webp"],
     locale: "en_IN",
     type: "website",
   },
@@ -91,31 +91,43 @@ export default function AboutPage() {
                 <span>Chronology & Heritage Verification:</span>
               </div>
               <p className="text-[#A7ADB5] text-[11px] leading-relaxed">
-                Official catalogue development milestones begin in <strong className="text-white">1993</strong> with the manufacturing of stone processing equipment. The official company emblem reflects <strong className="text-white">&quot;Since 1994&quot;</strong>, and corporate registration as L.N. Machineries Private Limited was formalized to scale industrial operations. Both historical references are respected and documented transparently.
+                Roots trace to <strong className="text-white">1984</strong> under founder Mr. Laxmi Narayan Jangid. Milestone manufacturing of stone-processing machinery commenced in <strong className="text-white">1993</strong> in Rajsamand, Rajasthan, with company branding reflecting <strong className="text-white">&quot;Since 1994&quot;</strong> and formal incorporation as L N Machineries Pvt. Ltd. Over <strong className="text-white">500+ machines</strong> have been manufactured and successfully commissioned across India and global export markets.
               </p>
+            </div>
+
+            {/* Engineering Component Standards */}
+            <div className="pt-1 flex flex-wrap items-center gap-2 text-[11px] font-mono text-[#A7ADB5]">
+              <span className="text-[#EF4444] font-semibold uppercase tracking-wider">Component Standards:</span>
+              <span>Siemens • Schneider • NTN • FAG • PMI Linear • Crompton Greaves • Elecon</span>
             </div>
           </div>
 
           <div className="lg:col-span-5 space-y-4">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#202326] bg-[#101112]">
               <Image
-                src="/images/factory/plant-workforce.jpg"
-                alt="Engineering Planners and Workforce at LN Engineering Works"
+                src="/images/about/precision-stone-processing-machine.webp"
+                alt="Genuine LN Engineering multiwire stone-cutting machine slicing a large natural stone block on an industrial rail trolley with water coolant"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
               />
-              <div className="absolute bottom-2 left-2 right-2 bg-[#101112]/85 backdrop-blur-md p-2 rounded-xl text-[10px] text-white font-mono">
-                Skilled Engineering Workforce • Rajsamand Plant
+              <div className="absolute bottom-2 left-2 right-2 bg-[#101112]/85 backdrop-blur-md p-2 rounded-xl text-[10px] text-white font-mono flex items-center justify-between">
+                <span>Precision Diamond Wire Saw in Operation</span>
+                <span className="text-[#EF4444]">Stone Processing Plant</span>
               </div>
             </div>
 
             <div className="bg-[#191B1D] border border-[#202326] p-5 rounded-2xl space-y-3 text-xs shadow-md">
-              <span className="font-mono text-xs font-semibold text-white block uppercase tracking-wider">
-                Founder & Leadership
-              </span>
+              <div className="flex items-center justify-between border-b border-white/5 pb-2">
+                <span className="font-mono text-xs font-semibold text-white uppercase tracking-wider">
+                  Founder & Leadership
+                </span>
+                <span className="text-[10px] font-mono text-[#EF4444] bg-[#EF4444]/10 px-2 py-0.5 rounded">
+                  500+ Machines Built
+                </span>
+              </div>
               <p className="text-[#A7ADB5] text-[11px] leading-relaxed">
-                Founded by <strong className="text-white">{company.founder}</strong>, LN Engineering has remained an engineering-first organization committed to continuous research in wire cutting dynamics, reducing kerf loss, and building machinery tailored to tough natural stones.
+                Founded by <strong className="text-white">Mr. Laxmi Narayan Jangid</strong> (30+ years manufacturing experience), LN Engineering is directed alongside technical and marketing heads <strong className="text-white">Mr. Narendra Jangid</strong> (B.E. Mechanical, Technical Head) and <strong className="text-white">Mr. Mahendra Jangid</strong> (B.E. Mechanical &amp; MBA, Marketing Head).
               </p>
             </div>
           </div>
