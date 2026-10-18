@@ -46,7 +46,8 @@ export async function POST(request: Request) {
     const email = sanitize(rawData.email);
     const phone = sanitize(rawData.phone);
     const countryLocation = sanitize(rawData.countryLocation);
-    const machineInterest = sanitize(rawData.machineInterest) || "General Stone Machinery";
+    const enquiryType = sanitize(rawData.enquiryType);
+    const machineInterest = sanitize(rawData.machineInterest) || enquiryType || "General Stone Machinery";
     const stoneType = sanitize(rawData.stoneType) || "Granite";
     const productionRequirement = sanitize(rawData.productionRequirement);
     const message = sanitize(rawData.message);
@@ -80,6 +81,13 @@ export async function POST(request: Request) {
       );
     }
 
+    if (!message || message.length < 5) {
+      return NextResponse.json(
+        { error: "Please enter your message (minimum 5 characters)." },
+        { status: 400 }
+      );
+    }
+
     // 5. Duplicate Submission Check (Within 5 minutes for same contact & machine)
     const primaryContact = phone || email;
     const existingRef = checkDuplicate(primaryContact, machineInterest);
@@ -107,6 +115,7 @@ export async function POST(request: Request) {
       phone,
       countryLocation,
       machineInterest,
+      enquiryType,
       stoneType,
       productionRequirement,
       message,

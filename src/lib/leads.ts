@@ -11,6 +11,7 @@ export interface StoredEnquiry {
   phone: string;
   countryLocation: string;
   machineInterest: string;
+  enquiryType?: string;
   stoneType: string;
   productionRequirement: string;
   message: string;
