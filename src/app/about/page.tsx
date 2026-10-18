@@ -10,14 +10,14 @@ import EnquiryBanner from "@/components/sections/EnquiryBanner";
 export const metadata: Metadata = {
   title: "About Us — History, Manufacturing Plant & Global Presence | LN Engineering",
   description:
-    "Learn about LN Engineering (L N Machineries Pvt. Ltd.): Founded in Rajsamand, Rajasthan. 30+ years of precision stone machinery development, verified ZED certifications, and global footprint across India, Egypt, Azerbaijan, and Nepal.",
+    "Learn about LN Engineering (L N Machineries Pvt. Ltd.): Founded in Rajsamand, Rajasthan. Three decades of precision stone machinery development, verified ZED certifications, and global footprint across India, Egypt, Azerbaijan, and Nepal.",
   alternates: {
     canonical: "https://www.gangsawmachines.com/about",
   },
   openGraph: {
     title: "About Us — History, Manufacturing Plant & Global Presence | LN Engineering",
     description:
-      "30+ years of precision stone machinery manufacturing, verified ZED certifications, and global export reach.",
+      "Three decades of precision stone machinery manufacturing, verified ZED certifications, and global export reach.",
     url: "https://www.gangsawmachines.com/about",
     siteName: "LN Engineering",
     images: ["/images/about/precision-stone-processing-machine.webp"],
@@ -107,14 +107,14 @@ export default function AboutPage() {
                   01 / Heritage & Origins
                 </span>
                 <span className="text-[10px] font-mono text-[#A7ADB5] bg-[#191B1D] px-2 py-0.5 rounded border border-[#202326]">
-                  Since 1984
+                  Est. 1993–94
                 </span>
               </div>
               <h3 className="font-display text-lg sm:text-xl font-bold uppercase text-white tracking-tight">
                 Roots in Indian Stone Processing
               </h3>
               <p className="text-xs sm:text-sm text-[#A7ADB5] leading-relaxed">
-                Roots trace to <strong className="text-white">1984</strong> under founder Mr. Laxmi Narayan Jangid. Manufacturing stone-processing machinery commenced in <strong className="text-white">1993</strong> at Rajsamand, Rajasthan, with company branding reflecting <strong className="text-white">&quot;Since 1994&quot;</strong> and formal incorporation as L N Machineries Pvt. Ltd. Over <strong className="text-white">500+ machines</strong> have been successfully built and commissioned across India and worldwide.
+                Founded by Mr. Laxmi Narayan Jangid, LN Engineering commenced stone-processing machinery manufacturing in <strong className="text-white">1993</strong> at Rajsamand, Rajasthan, with company branding reflecting <strong className="text-white">&quot;Since 1994&quot;</strong> and formal incorporation as L N Machineries Pvt. Ltd. Over <strong className="text-white">500+ machines</strong> have been successfully built and commissioned across India and worldwide.
               </p>
             </div>
 
@@ -390,7 +390,7 @@ export default function AboutPage() {
             Awards, Recognitions & ZED Certifications
           </h2>
           <p className="text-xs text-[#A7ADB5]">
-            Directly sourced from LN Engineering catalogue page 5: &quot;Accolades & Appreciation&quot;.
+            Directly sourced from LN Engineering catalogue page 5: &quot;Accolades & Appreciation&quot;. Official certification and recognition documents are available upon request.
           </p>
         </div>
 

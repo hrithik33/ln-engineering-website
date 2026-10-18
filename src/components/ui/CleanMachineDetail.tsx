@@ -214,6 +214,8 @@ export default function CleanMachineDetail({
   // Related categories for cross-navigation
   const relatedCategories = productCategories.filter((c) => c.slug !== categorySlug);
 
+  const isConsumable = categorySlug === "wire-rope" || activeModel.categorySlug === "wire-rope";
+
   // Product Schema (JSON-LD)
   const productSchema = {
     "@context": "https://schema.org",
@@ -230,10 +232,10 @@ export default function CleanMachineDetail({
       name: company.legalName,
       url: "https://www.gangsawmachines.com",
     },
-    category: categoryName,
+    category: isConsumable ? "Industrial Diamond Wire Tooling" : categoryName,
     offers: {
       "@type": "Offer",
-      url: `https://www.gangsawmachines.com/machines/${categorySlug}`,
+      url: isConsumable ? "https://www.gangsawmachines.com/products/wire-rope" : `https://www.gangsawmachines.com/machines/${categorySlug}`,
       priceCurrency: "INR",
       price: "Request Quotation",
       availability: "https://schema.org/InStock",
@@ -254,14 +256,14 @@ export default function CleanMachineDetail({
       {
         "@type": "ListItem",
         position: 2,
-        name: "Machines",
-        item: "https://www.gangsawmachines.com/machines",
+        name: isConsumable ? "Tooling & Consumables" : "Machines",
+        item: isConsumable ? "https://www.gangsawmachines.com/products/wire-rope" : "https://www.gangsawmachines.com/machines",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: categoryName,
-        item: `https://www.gangsawmachines.com/machines/${categorySlug}`,
+        item: isConsumable ? "https://www.gangsawmachines.com/products/wire-rope" : `https://www.gangsawmachines.com/machines/${categorySlug}`,
       },
     ],
   };
@@ -282,7 +284,10 @@ export default function CleanMachineDetail({
       <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-4">
         <Breadcrumbs
           items={[
-            { label: "Machines", href: "/machines" },
+            {
+              label: isConsumable ? "Products" : "Machines",
+              href: isConsumable ? "/products/wire-rope" : "/machines",
+            },
             { label: categoryName },
           ]}
         />
@@ -385,7 +390,11 @@ export default function CleanMachineDetail({
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 bg-[#151719] shadow-2xl">
               <Image
                 src={currentHeroImage}
-                alt={`${activeModel.name} Industrial Stone-Processing Machine visual ${activeImageIndex + 1}`}
+                alt={
+                  isConsumable
+                    ? `${activeModel.name} — Precision Diamond Wire Rope Consumable (Beads & Core Wire detail view ${activeImageIndex + 1})`
+                    : `${activeModel.name} Industrial Stone-Processing Machine visual ${activeImageIndex + 1}`
+                }
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 45vw"
@@ -398,7 +407,7 @@ export default function CleanMachineDetail({
 
             {/* Thumbnail Selector */}
             {galleryImages.length > 1 && (
-              <div className="flex gap-2.5 overflow-x-auto pb-1" aria-label="Machine Photo Gallery">
+              <div className="flex gap-2.5 overflow-x-auto pb-1" aria-label="Product Photo Gallery">
                 {galleryImages.map((img, idx) => (
                   <button
                     key={idx}
@@ -413,7 +422,7 @@ export default function CleanMachineDetail({
                   >
                     <Image
                       src={img}
-                      alt={`Thumbnail ${idx + 1}`}
+                      alt={isConsumable ? `Diamond wire rope close-up view ${idx + 1}` : `Thumbnail ${idx + 1}`}
                       fill
                       sizes="80px"
                       className="object-cover"
@@ -530,17 +539,27 @@ export default function CleanMachineDetail({
             </h2>
           </div>
 
-          <a
-            href="/documents/product-catalogue.pdf"
-            download="LN_Engineering_Product_Catalogue.pdf"
-            className="text-xs font-mono font-medium text-[#EF4444] hover:text-white inline-flex items-center gap-2 px-3.5 py-2 bg-[#191B1D] border border-white/10 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#EF4444]"
-            aria-label="Download Product Catalogue (PDF, 41 MB)"
-          >
-            <svg className="w-4 h-4 text-[#EF4444]" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5h-2v1.5h2c.55 0 1-.45 1-1s-.45-.5-1-.5zm0-3h-2v1.5h2c.55 0 1-.45 1-1s-.45-.5-1-.5zm5 4.5h-1.5v-4h1.5c.83 0 1.5.67 1.5 1.5v1c0 .83-.67 1.5-1.5 1.5zm4.5-2.5h-1.5v1h1.5v1.5h-1.5V14h-1.5V8.5h3v1.5z"/>
-            </svg>
-            <span>Download Product Catalogue (PDF) &rarr;</span>
-          </a>
+          <div className="flex flex-wrap items-center gap-2">
+            <a
+              href="/documents/ln-engineering-catalogue-optimized.pdf"
+              download="LN_Engineering_Master_Catalogue.pdf"
+              className="text-xs font-mono font-medium text-white hover:text-[#EF4444] inline-flex items-center gap-2 px-3.5 py-2 bg-[#191B1D] border border-white/15 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#EF4444]"
+              aria-label="Download Master Catalogue (PDF, 3.8 MB)"
+            >
+              <svg className="w-3.5 h-3.5 text-[#EF4444]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5h-2v1.5h2c.55 0 1-.45 1-1s-.45-.5-1-.5zm0-3h-2v1.5h2c.55 0 1-.45 1-1s-.45-.5-1-.5zm5 4.5h-1.5v-4h1.5c.83 0 1.5.67 1.5 1.5v1c0 .83-.67 1.5-1.5 1.5zm4.5-2.5h-1.5v1h1.5v1.5h-1.5V14h-1.5V8.5h3v1.5z"/>
+              </svg>
+              <span>Master Catalogue (3.8 MB) &rarr;</span>
+            </a>
+            <a
+              href="/documents/product-catalogue.pdf"
+              download="LN_Engineering_Product_Catalogue.pdf"
+              className="text-xs font-mono font-medium text-[#A7ADB5] hover:text-white inline-flex items-center gap-2 px-3.5 py-2 bg-[#141517] border border-white/10 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white"
+              aria-label="Download Full Product Catalogue (PDF, 41 MB)"
+            >
+              <span>Print Edition (41 MB) &rarr;</span>
+            </a>
+          </div>
         </div>
 
         {/* Clean Two-Column Specification Table with Subtle Dividers */}
@@ -702,17 +721,19 @@ export default function CleanMachineDetail({
       <div className="max-w-7xl mx-auto px-4 sm:px-8 pt-8">
         <div className="bg-[#151719] border border-white/10 rounded-2xl p-8 sm:p-12 text-center max-w-4xl mx-auto space-y-4 shadow-xl">
           <h3 className="font-display text-2xl sm:text-3xl font-semibold uppercase text-white tracking-tight">
-            Need the right machine for your production?
+            {isConsumable ? "Looking for high-endurance diamond wire rope?" : "Need the right machine for your production?"}
           </h3>
           <p className="text-sm sm:text-base text-[#A7ADB5] max-w-xl mx-auto leading-relaxed">
-            Speak with LN Engineering about your stone-cutting requirements, custom trolley dimensions, or daily output specifications.
+            {isConsumable
+              ? "Speak with LN Engineering technical team about diamond bead specifications, recommended cutting speeds for your stone variety, custom coil lengths, or bulk quotation."
+              : "Speak with LN Engineering about your stone-cutting requirements, custom trolley dimensions, or daily output specifications."}
           </p>
           <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
             <Link
               href={`/contact?machine=${encodeURIComponent(activeModel.name)}`}
               className="inline-flex items-center justify-center min-h-[44px] px-8 py-3.5 bg-[#C82032] hover:bg-[#D92639] text-white font-sans text-xs font-semibold uppercase tracking-wider rounded-xl transition-all shadow-lg shadow-[#C82032]/25 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C82032]"
             >
-              Request a Quote
+              {isConsumable ? "Request Wire Rope Quote" : "Request a Quote"}
             </Link>
             <a
               href={whatsappUrl}

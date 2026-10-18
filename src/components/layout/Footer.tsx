@@ -147,11 +147,14 @@ export default function Footer() {
                   href="/products/wire-rope" 
                   className="group block focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#EF4444] rounded p-0.5"
                 >
-                  <span className="font-medium text-white group-hover:text-[#EF4444] transition-colors block leading-snug">
-                    Diamond Wire Rope
+                  <span className="font-medium text-white group-hover:text-[#EF4444] transition-colors flex items-center gap-2 leading-snug">
+                    <span>Diamond Wire Rope</span>
+                    <span className="text-[9px] font-mono font-normal uppercase text-[#EF4444] bg-[#EF4444]/10 px-1.5 py-0.5 rounded border border-[#EF4444]/20">
+                      Consumable
+                    </span>
                   </span>
                   <span className="block text-[11px] font-mono text-[#9CA3AF] mt-0.5">
-                    High-Speed Sintered & Vacuum Brazed
+                    35 Beads/M • 11.5mm High-Tensile Core
                   </span>
                 </Link>
               </li>
@@ -337,6 +340,10 @@ export default function Footer() {
           <div className="flex gap-4 font-mono text-[10px] uppercase text-[#7E8691]">
             <Link href="/about" className="hover:text-white transition-colors">
               Heritage Documentation
+            </Link>
+            <span>•</span>
+            <Link href="/privacy" className="hover:text-white transition-colors">
+              Privacy Notice
             </Link>
             <span>•</span>
             <Link href="/contact" className="hover:text-white transition-colors">

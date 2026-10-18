@@ -2,6 +2,7 @@ import React from "react";
 import { Metadata } from "next";
 import { monoWireModels } from "@/data/products";
 import CleanMachineDetail from "@/components/ui/CleanMachineDetail";
+import ModelComparisonTable from "@/components/ui/ModelComparisonTable";
 
 export const metadata: Metadata = {
   title: "Mono Wire Saw Machines — LN 2500, PRO & PROMAXX Specifications | LN Engineering",
@@ -30,11 +31,14 @@ export const metadata: Metadata = {
 
 export default function MonoWireSawPage() {
   return (
-    <CleanMachineDetail
-      categorySlug="mono-wire-saw"
-      categoryName="Mono Wire Saw Machines"
-      models={monoWireModels}
-      defaultModelSlug="ln-2500"
-    />
+    <>
+      <CleanMachineDetail
+        categorySlug="mono-wire-saw"
+        categoryName="Mono Wire Saw Machines"
+        models={monoWireModels}
+        defaultModelSlug="ln-2500"
+      />
+      <ModelComparisonTable models={monoWireModels} />
+    </>
   );
 }

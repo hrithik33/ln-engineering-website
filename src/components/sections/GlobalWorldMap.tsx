@@ -128,8 +128,8 @@ export default function GlobalWorldMap() {
         <div className="flex flex-wrap gap-4 text-xs font-mono">
           <div className="bg-[#191B1D] border border-white/10 px-4 py-3 rounded-xl">
             <span className="text-[#EF4444] text-xl font-bold block">120+</span>
-            <span className="text-white font-medium block uppercase text-[11px]">Operating Units</span>
-            <span className="text-[#A7ADB5] text-[10px]">Verified field track record</span>
+            <span className="text-white font-medium block uppercase text-[11px]">Running Wire Saws</span>
+            <span className="text-[#A7ADB5] text-[10px]">Documented fleet (500+ built)</span>
           </div>
           <div className="bg-[#191B1D] border border-white/10 px-4 py-3 rounded-xl">
             <span className="text-white text-xl font-bold block">ZED</span>

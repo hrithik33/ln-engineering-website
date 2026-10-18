@@ -79,7 +79,7 @@ export default function HomePage() {
             src="/images/hero/industrial-stone-cutting-spray.webp"
             alt="LN Engineering Industrial Stone-Cutting Machine Under High-Pressure Water Spray"
             fill
-            preload={true}
+            priority
             fetchPriority="high"
             loading="eager"
             sizes="100vw"
@@ -233,8 +233,8 @@ export default function HomePage() {
             <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
               <div className="bg-[#101112] border border-white/10 p-5 rounded-xl space-y-1.5">
                 <span className="text-[#EF4444] text-2xl font-bold block">120+</span>
-                <span className="text-white font-semibold block text-xs uppercase">Operating Machines</span>
-                <span className="text-[#A7ADB5] text-[11px] block">Verified operational track record</span>
+                <span className="text-white font-semibold block text-xs uppercase">Running Wire Saws</span>
+                <span className="text-[#A7ADB5] text-[11px] block">Documented running fleet (500+ lifetime built)</span>
               </div>
 
               <div className="bg-[#101112] border border-white/10 p-5 rounded-xl space-y-1.5">

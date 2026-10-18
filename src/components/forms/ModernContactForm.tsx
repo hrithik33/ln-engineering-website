@@ -155,7 +155,7 @@ export default function ModernContactForm({ initialMachine, className = "" }: Mo
         </div>
 
         <p className="text-xs text-[#A7ADB5] max-w-md mx-auto leading-relaxed">
-          Our engineering team in Rajsamand will review your inquiry and respond within 24 business hours.
+          Our engineering team in Rajsamand will review your inquiry and respond promptly.
         </p>
 
         <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -417,9 +417,9 @@ export default function ModernContactForm({ initialMachine, className = "" }: Mo
           </button>
         </div>
 
-        {/* Micro note on confidentiality */}
-        <p className="text-[11px] text-zinc-500 font-mono text-center">
-          Strict industrial confidentiality • Direct review by LN Engineering machine engineers
+        <p className="text-[11px] text-zinc-500 text-center leading-relaxed max-w-lg mx-auto">
+          By submitting this form, you consent to LN Engineering collecting and using your business contact details solely to respond to your enquiry, prepare technical proposals, and provide product information. Your details will not be shared with third parties. For questions about your data, contact{" "}
+          <a href="mailto:info@gangsawmachines.com" className="text-zinc-400 hover:text-white underline">info@gangsawmachines.com</a>.
         </p>
       </form>
     </div>

@@ -28,7 +28,7 @@ export default function IndustrialTrustSection({
         <div className="flex items-center gap-3">
           <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#191B1D] border border-white/10 rounded-full text-xs font-mono text-[#EF4444]">
             <span className="w-2 h-2 rounded-full bg-[#EF4444] animate-pulse"></span>
-            <span>ZED Bronze Certified</span>
+            <span>ZED Quality Certified • ISO 9001:2015</span>
           </span>
         </div>
       </div>

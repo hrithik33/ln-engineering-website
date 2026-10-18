@@ -129,7 +129,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
             </div>
             <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/[0.02] border border-white/5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#25D366]" />
-              <span>Response Within 24 Hours</span>
+              <span>Prompt Response Guaranteed</span>
             </div>
             <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/[0.02] border border-white/5">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-400" />

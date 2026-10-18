@@ -89,7 +89,7 @@ export default function MachinesOverviewPage() {
             <div className="bg-[#191B1D] border border-white/10 rounded-2xl p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-xl">
               <div className="lg:col-span-8 space-y-3">
                 <span className="font-mono text-[11px] font-semibold tracking-[0.2em] text-[#EF4444] uppercase block">
-                  Machine Family
+                  {category.slug === "wire-rope" ? "Tooling & Consumables" : "Machine Family"}
                 </span>
                 <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold uppercase text-white tracking-tight">
                   {category.name}
@@ -105,7 +105,11 @@ export default function MachinesOverviewPage() {
                     href={category.slug === "wire-rope" ? "/products/wire-rope" : `/machines/${category.slug}`}
                     className="inline-flex items-center gap-1.5 font-sans text-xs font-semibold text-white hover:text-[#C82032] uppercase tracking-wider group transition-colors"
                   >
-                    <span>View Dedicated Family Page & Comparative Tables</span>
+                    <span>
+                      {category.slug === "wire-rope"
+                        ? "View Wire Specifications & Coil Details"
+                        : "View Dedicated Family Page & Comparative Tables"}
+                    </span>
                     <svg
                       className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"
                       fill="none"
@@ -121,7 +125,11 @@ export default function MachinesOverviewPage() {
               <div className="lg:col-span-4 relative aspect-[16/10] rounded-2xl overflow-hidden border border-white/10 bg-[#101112]">
                 <Image
                   src={category.heroImage}
-                  alt={category.name}
+                  alt={
+                    category.slug === "wire-rope"
+                      ? "LN Engineering Diamond Wire Rope — 35 Beads/M Consumable Tooling"
+                      : `${category.name} Industrial Stone Machinery`
+                  }
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-cover"

@@ -116,13 +116,20 @@ export default function Header() {
                               <Link
                                 key={sub.label}
                                 href={sub.href}
-                                className={`block px-3.5 py-2.5 rounded-xl text-xs font-medium transition-all ${
+                                className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-medium transition-all ${
                                   isCurrent
                                     ? "text-white bg-[#C82032] font-semibold"
                                     : "text-[#A7ADB5] hover:text-white hover:bg-white/5"
                                 }`}
                               >
-                                {sub.label}
+                                <span>{sub.label}</span>
+                                {sub.badge && (
+                                  <span className={`text-[9px] font-mono uppercase px-1.5 py-0.5 rounded ${
+                                    isCurrent ? "bg-black/30 text-white" : "bg-[#25282E] text-[#EF4444] border border-[#EF4444]/30"
+                                  }`}>
+                                    {sub.badge}
+                                  </span>
+                                )}
                               </Link>
                             );
                           })}
@@ -227,9 +234,14 @@ export default function Header() {
                       <Link
                         key={sub.label}
                         href={sub.href}
-                        className="min-h-[40px] flex items-center text-xs font-sans text-[#A7ADB5] hover:text-white px-2 py-1 rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C82032]"
+                        className="min-h-[40px] flex items-center justify-between text-xs font-sans text-[#A7ADB5] hover:text-white px-2 py-1 rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C82032]"
                       >
-                        {sub.label}
+                        <span>{sub.label}</span>
+                        {sub.badge && (
+                          <span className="text-[9px] font-mono uppercase px-1.5 py-0.5 rounded bg-[#25282E] text-[#EF4444] border border-[#EF4444]/30">
+                            {sub.badge}
+                          </span>
+                        )}
                       </Link>
                     ))}
                   </div>

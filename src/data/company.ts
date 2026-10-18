@@ -36,8 +36,8 @@ export const company = {
       badge: "Founder & Chairman",
       image: "/images/about/leadership/mr-l-n-jangid.webp",
       imageAlt: "Mr. L. N. Jangid, Founder and Chairman of LN Engineering",
-      experience: "30+ Years Industry Experience (Active Since 1980)",
-      bio: "Rich experience in stone processing machinery manufacturing since 1980. Spearheads core machine design, structural innovation, and executive governance. His hands-on engineering research has guided LN Engineering to manufacture and commission over 500+ heavy stone processing machines.",
+      experience: "Decades of Industry Experience",
+      bio: "Rich experience in stone processing and industrial engineering. Spearheads core machine design, structural innovation, and executive governance. His engineering research has guided LN Engineering to manufacture and commission over 500 machines.",
       responsibilities: [
         "Core Machine Design & Rigidity Calculations",
         "High Safety Factor Mechanical Engineering",
@@ -242,46 +242,58 @@ export const timeline: TimelineItem[] = [
   },
   {
     year: "2023",
-    title: "CNC Wire Profile & Thick Slab Multiwire",
-    description: "Introduced 2-axis & multi-axis CNC wire profiling machines with Siemens CNC and thick-slab multiwire.",
+    title: "CNC Wire Profile Machines",
+    description: "Introduced 2-axis & multi-axis CNC wire profiling machines with Siemens CNC for architectural stonework.",
+  },
+  {
+    year: "2026",
+    title: "Multiwire Gangsaw for Thick Slabs",
+    description: "Breakthrough multiwire platform engineered specifically for monuments, kerbstones, and heavy architectural thick slabs.",
   },
 ] as const;
 
 export const verifiedCredentials = [
   {
-    year: "2008 & 2010",
-    title: "Quality Certifications",
-    organization: "Industrial Quality Standards",
-    description: "Formal quality certifications for stone cutting and processing machine design.",
-    status: "Verified in Catalogue",
-  },
-  {
-    year: "2010",
+    year: "2008",
     title: "RFC Gold Borrower Recognition",
     organization: "Rajasthan Financial Corporation (RFC)",
     description: "Appreciation from RFC for financial excellence and sound operational credibility.",
-    status: "Verified in Catalogue",
+    status: "Referenced in Company Catalogue",
+  },
+  {
+    year: "2010",
+    title: "ISO 9001 Quality Certification",
+    organization: "International Organization for Standardization",
+    description: "Certified quality management system covering stone processing machinery manufacturing and testing.",
+    status: "Referenced in Company Catalogue",
   },
   {
     year: "2022",
     title: "ZED Bronze Quality Certification",
     organization: "Ministry of MSME, Government of India",
     description: "Zero Defect Zero Effect (ZED) Bronze level certification for manufacturing quality and eco-responsibility.",
-    status: "Verified in Catalogue",
+    status: "Referenced in Company Catalogue",
   },
   {
     year: "2023",
     title: "ZED Silver Quality Certification",
     organization: "Ministry of MSME, Government of India",
     description: "Elevated to ZED Silver level by Govt of India, confirming advanced precision quality systems.",
-    status: "Verified in Catalogue",
+    status: "Referenced in Company Catalogue",
   },
   {
     year: "2023",
     title: "Best Stone Technology (Multiwire) Award",
     organization: "Ministry of MSME / Stone Industry Forum",
     description: "Awarded Best Stone Technology for indigenous multiwire gangsaw innovation and precision cutting performance.",
-    status: "Verified in Catalogue",
+    status: "Referenced in Company Catalogue",
+  },
+  {
+    year: "Current",
+    title: "ZED Gold & ISO 9001:2015",
+    organization: "Ministry of MSME & ISO Standards",
+    description: "India's First 'ZED Gold' Certified Company in stone machine category (Catalogue Cover) & ISO 9001:2015 Certified.",
+    status: "Referenced in Company Catalogue",
   },
 ] as const;
 
