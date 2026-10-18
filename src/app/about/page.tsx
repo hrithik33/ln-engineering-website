@@ -269,7 +269,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Verified Plant Capabilities & Installations Gallery */}
+      {/* Verified Plant Capabilities & Standards */}
       <IndustrialTrustSection showCatalogueDownloads={false} />
 
       {/* Global Enquiry Banner */}

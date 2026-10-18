@@ -374,7 +374,7 @@ export default function HomePage() {
       </section>
 
       {/* =====================================================================
-          5. VERIFIED PLANT CAPABILITIES & INSTALLATIONS GALLERY
+          5. VERIFIED PLANT CAPABILITIES & STANDARDS
           ===================================================================== */}
       <IndustrialTrustSection />
 

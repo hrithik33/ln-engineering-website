@@ -1,7 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { company } from "@/data/company";
 
 interface IndustrialTrustSectionProps {
   showCatalogueDownloads?: boolean;
@@ -12,45 +9,6 @@ export default function IndustrialTrustSection({
   showCatalogueDownloads = true,
   className = "",
 }: IndustrialTrustSectionProps) {
-  const verifiedInstallations = [
-    {
-      title: "Marmomac Verona International Stone Exhibition",
-      location: "Verona, Italy",
-      image: "/images/factory/exhibition-verona.jpg",
-      caption: "International stone technology exposition showcasing LN Engineering wire sawing innovations.",
-    },
-    {
-      title: "India StoneMart International Exposition",
-      location: "Jaipur, Rajasthan",
-      image: "/images/factory/exhibition-stonemart.jpg",
-      caption: "Live demonstration of 5th generation mono wire saws and multiwire gangsaw engineering.",
-    },
-    {
-      title: "Heavy-Duty Precision Lathe Machining",
-      location: "Rajsamand Manufacturing Works",
-      image: "/images/factory/plant-lathe.jpg",
-      caption: "Machining large-diameter 2500 mm flywheels and cylindrical drive components.",
-    },
-    {
-      title: "Mechanical Engineering Workforce",
-      location: "Assembly Bay, Rajsamand",
-      image: "/images/factory/plant-workforce.jpg",
-      caption: "Certified fabricators, machine planners, and assembly technicians overseeing structural alignment.",
-    },
-    {
-      title: "Customer Commissioning & Delivery Trials",
-      location: "Granite Processing Plant",
-      image: "/images/factory/event-p14-img1.jpg",
-      caption: "Field testing downfeed cutting rates and diamond wire tension stability prior to handover.",
-    },
-    {
-      title: "Factory Frame Fabrication Bay",
-      location: "Rajsamand Works",
-      image: "/images/factory/event-p13-img1.jpg",
-      caption: "Heavy box-section mild steel gantry fabrication engineered for vibration-free wire sawing.",
-    },
-  ];
-
   return (
     <section className={`py-20 px-4 sm:px-8 max-w-7xl mx-auto space-y-16 ${className}`}>
       {/* Section Header */}
@@ -60,7 +18,7 @@ export default function IndustrialTrustSection({
             Manufacturing Rigor &amp; Global Footprint
           </span>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold uppercase text-white tracking-tight">
-            Verified Plant Capabilities &amp; Installations
+            Verified Plant Capabilities &amp; Standards
           </h2>
           <p className="text-sm text-[#A7ADB5] max-w-2xl leading-relaxed">
             Built on three decades of heavy mechanical engineering in Rajsamand, Rajasthan. LN Engineering delivers rigid machinery tested under real quarry and stone processing plant loads.
@@ -120,50 +78,6 @@ export default function IndustrialTrustSection({
           <div className="pt-2 text-[11px] font-mono text-zinc-400 border-t border-white/5">
             Offices: Rajsamand • Ongole • Martur
           </div>
-        </div>
-      </div>
-
-      {/* 2. Authentic Installation & Exhibition Gallery */}
-      <div className="space-y-6">
-        <div className="flex items-center justify-between">
-          <h3 className="font-display text-2xl font-semibold uppercase text-white tracking-tight">
-            Factory Floor &amp; International Exhibitions
-          </h3>
-          <span className="text-xs font-mono text-[#7E8691]">
-            Authentic Photo Documentation
-          </span>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {verifiedInstallations.map((item, idx) => (
-            <div
-              key={idx}
-              className="bg-[#151719] border border-white/10 rounded-2xl overflow-hidden group hover:border-white/20 transition-all flex flex-col justify-between shadow-lg"
-            >
-              <div className="relative aspect-[16/10] bg-[#101112] overflow-hidden">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#151719] via-transparent to-transparent opacity-70" />
-                <span className="absolute bottom-2.5 left-2.5 text-[10px] font-mono text-white/90 bg-black/60 px-2 py-0.5 rounded backdrop-blur-md">
-                  {item.location}
-                </span>
-              </div>
-
-              <div className="p-5 space-y-1.5 flex-1">
-                <h4 className="font-display text-lg font-semibold uppercase text-white tracking-tight leading-snug">
-                  {item.title}
-                </h4>
-                <p className="text-xs text-[#A7ADB5] leading-relaxed">
-                  {item.caption}
-                </p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
 
