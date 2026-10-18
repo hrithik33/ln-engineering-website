@@ -79,10 +79,11 @@ export default function HomePage() {
             src="/images/hero/industrial-stone-cutting-spray.webp"
             alt="LN Engineering Industrial Stone-Cutting Machine Under High-Pressure Water Spray"
             fill
-            priority
+            preload={true}
             fetchPriority="high"
-            sizes="(max-width: 768px) 100vw, 100vw"
-            quality={82}
+            loading="eager"
+            sizes="100vw"
+            quality={80}
             className="object-cover object-center sm:object-[center_35%] filter brightness-[0.88] contrast-[1.04]"
           />
           {/* Subtle Cinematic Black Gradient Overlay: darker on left for text readability, lighter on right for machinery vibrancy */}

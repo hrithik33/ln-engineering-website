@@ -51,7 +51,7 @@ export default function Header() {
                 alt="LN Engineering Official Logo"
                 width={40}
                 height={40}
-                priority
+                loading="eager"
                 className="object-contain"
               />
             </div>

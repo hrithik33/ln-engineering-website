@@ -179,12 +179,20 @@ export default function GlobalWorldMap() {
                       d.category === "home"
                         ? "bg-white"
                         : d.category === "export"
-                        ? "bg-[#EF4444]"
+                        ? isSelected
+                          ? "bg-white"
+                          : "bg-[#EF4444]"
+                        : isSelected
+                        ? "bg-white"
                         : "bg-[#A7ADB5]"
                     }`}
                   />
                   <span>{d.name.split(" ")[0]}</span>
-                  <span className="text-[10px] text-[#A7ADB5] hidden sm:inline">
+                  <span
+                    className={`text-[10px] hidden sm:inline ${
+                      isSelected ? "text-white" : "text-[#A7ADB5]"
+                    }`}
+                  >
                     ({d.badge})
                   </span>
                 </button>
