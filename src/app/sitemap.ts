@@ -60,13 +60,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/about/leadership/mayank-jangid`,
+      url: `${baseUrl}/about/leadership/manish-jangid`,
       lastModified: currentDate,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/about/leadership/manish-jangid`,
+      url: `${baseUrl}/about/leadership/mayank-jangid`,
       lastModified: currentDate,
       changeFrequency: "monthly",
       priority: 0.7,

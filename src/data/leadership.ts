@@ -158,101 +158,6 @@ export const leadershipProfiles: LeadershipProfile[] = [
     ],
   },
   {
-    slug: "mayank-jangid",
-    name: "Mr. Mayank Jangid",
-    role: "Director",
-    badge: "Director",
-    image: "/images/about/leadership/mr-mayank-jangid.webp",
-    imageAlt: "Mr. Mayank Jangid, Director at LN Engineering",
-    qualification: "B.E. Mechanical & Production Oversight",
-    experienceDisplay: "Heavy Fabrication & Plant Oversight",
-    headline: "Directing Precision Machine Fabrication, Shop Floor Tooling & Field Commissioning",
-    shortIntro:
-      "Director overseeing mechanical manufacturing, heavy gantry fabrication, structural tolerance inspection, and turnkey plant commissioning at LN Engineering's Rajsamand works.",
-    professionalOverview: [
-      "Mr. Mayank Jangid holds a Bachelor of Engineering (B.E.) in Mechanical Engineering. He directs all physical manufacturing operations, heavy fabrication workshops, and precision assembly lines at LN Engineering's Rajsamand manufacturing works.",
-      "His technical focus centers on structural rigidity, precision pillar alignment, dynamic vibration damping, and turnkey commissioning. Under his production oversight, the factory deploys heavy-duty machine tooling including HMT lathes, Swedish horizontal boring machinery, and large-bed planar shapers to maintain sub-millimeter tolerances on multi-tonne fabricated beams.",
-      "He personally supervises the quality inspection protocols for every gantry frame, ensuring strict adherence to the company's &plusmn;0.2 mm parallel slab cutting standard before equipment is dispatched for domestic installation or overseas export.",
-    ],
-    journeyWithLN: {
-      overview:
-        "Leading the modernization of LN Engineering's shop floor infrastructure, Mr. Mayank Jangid has translated advanced mechanical engineering into streamlined, standardized production workflows.",
-      keyContributions: [
-        "Modernized the Rajsamand machine shop with high-precision horizontal boring and milling infrastructure.",
-        "Standardized the 5th generation mono-wire frame fabrication, incorporating 32 heavy-duty guide rollers for zero wire deviation.",
-        "Established rigid pre-dispatch testing protocols, verifying dynamic flywheel balance and hydraulic tension response under simulated full loads.",
-        "Personally supervised turnkey plant installations and commissioning for major stone processors across Rajasthan, Andhra Pradesh, and Karnataka.",
-        "Implemented rigorous Zero Defect Zero Effect (ZED) quality management practices throughout the fabrication plant.",
-      ],
-    },
-    areasOfResponsibility: [
-      {
-        title: "Machinery Manufacturing & Heavy Fabrication",
-        description:
-          "Oversees plate cutting, heavy multi-pass welding, stress relief, and gantry assembly across all machine categories.",
-        tags: ["Heavy Fabrication", "Weld Inspection", "Assembly Line"],
-      },
-      {
-        title: "Structural Alignment & Tolerance Inspection",
-        description:
-          "Ensures vertical pillars, flywheel shafts, and revolving block turntables meet strict sub-millimeter planar standards.",
-        tags: ["Tolerance Metrology", "Flywheel Balancing", "Guide Roller Setup"],
-      },
-      {
-        title: "Machine Tooling & Plant Equipment",
-        description:
-          "Directs operations of the in-house machine tool park, including HMT heavy-duty lathes and Swedish horizontal boring machinery.",
-        tags: ["HMT Tooling", "Boring Machining", "Plant Maintenance"],
-      },
-      {
-        title: "Turnkey Field Commissioning",
-        description:
-          "Coordinates field engineers and technicians during foundation setup, electrical cabling, hydraulic hookup, and trial stone cuts.",
-        tags: ["Site Commissioning", "Civil Layouts", "Field Engineering"],
-      },
-    ],
-    milestones: [
-      {
-        year: "Key Initiative",
-        title: "Machine Shop Modernization",
-        description:
-          "Integrated high-capacity Swedish horizontal boring machines and large-bed shapers into core fabrication workflows.",
-      },
-      {
-        year: "Key Initiative",
-        title: "Standardization of 32-Roller Guide Assembly",
-        description:
-          "Re-engineered vertical up/down carriage mechanics with 32 heavy-duty rollers, dramatically reducing wire flutter.",
-      },
-      {
-        year: "Key Initiative",
-        title: "Turnkey Cluster Commissioning Across India",
-        description:
-          "Supervised multi-machine installation projects across major stone corridors including Ongole, Martur, Hosur, and Bijoliya.",
-      },
-      {
-        year: "Quality Focus",
-        title: "ZED Quality Standard Implementation",
-        description:
-          "Embedded zero-defect fabrication controls on the shop floor, supporting company ZED quality certifications from Govt. of India.",
-      },
-    ],
-    relevantMachines: [
-      {
-        name: "LN 2500 PRO Mono Wire Saw",
-        series: "5th Generation Dual Dressing & Slicing",
-        href: "/machines/mono-wire-saw#ln-2500-pro",
-        description: "25 HP mono wire machine equipped with dual RPM vertical feed, wireless remote, and dressing plus slab cutting capability.",
-      },
-      {
-        name: "LN 6 Wire Multiwire Gangsaw",
-        series: "Thick Slab Processing Master",
-        href: "/machines/multiwire-saw#ln-6-wire",
-        description: "Rugged 40 HP multiwire system built for monuments, kerbstones, and heavy architectural thick slabs from 50 to 100 mm.",
-      },
-    ],
-  },
-  {
     slug: "manish-jangid",
     name: "Mr. Manish Jangid",
     role: "Director",
@@ -344,6 +249,101 @@ export const leadershipProfiles: LeadershipProfile[] = [
         series: "Siemens CNC Multiaxis Profile Series",
         href: "/machines/cnc-wire-profile#ln-cnc-2100-promaxx",
         description: "Genuine Siemens CNC-driven wire machine for intricate 2D/3D architectural profiling, fluted columns, and curved moldings.",
+      },
+    ],
+  },
+  {
+    slug: "mayank-jangid",
+    name: "Mr. Mayank Jangid",
+    role: "Director",
+    badge: "Director",
+    image: "/images/about/leadership/mr-mayank-jangid.webp",
+    imageAlt: "Mr. Mayank Jangid, Director at LN Engineering",
+    qualification: "B.E. Mechanical & Production Oversight",
+    experienceDisplay: "Heavy Fabrication & Plant Oversight",
+    headline: "Directing Precision Machine Fabrication, Shop Floor Tooling & Field Commissioning",
+    shortIntro:
+      "Director overseeing mechanical manufacturing, heavy gantry fabrication, structural tolerance inspection, and turnkey plant commissioning at LN Engineering's Rajsamand works.",
+    professionalOverview: [
+      "Mr. Mayank Jangid holds a Bachelor of Engineering (B.E.) in Mechanical Engineering. He directs all physical manufacturing operations, heavy fabrication workshops, and precision assembly lines at LN Engineering's Rajsamand manufacturing works.",
+      "His technical focus centers on structural rigidity, precision pillar alignment, dynamic vibration damping, and turnkey commissioning. Under his production oversight, the factory deploys heavy-duty machine tooling including HMT lathes, Swedish horizontal boring machinery, and large-bed planar shapers to maintain sub-millimeter tolerances on multi-tonne fabricated beams.",
+      "He personally supervises the quality inspection protocols for every gantry frame, ensuring strict adherence to the company's &plusmn;0.2 mm parallel slab cutting standard before equipment is dispatched for domestic installation or overseas export.",
+    ],
+    journeyWithLN: {
+      overview:
+        "Leading the modernization of LN Engineering's shop floor infrastructure, Mr. Mayank Jangid has translated advanced mechanical engineering into streamlined, standardized production workflows.",
+      keyContributions: [
+        "Modernized the Rajsamand machine shop with high-precision horizontal boring and milling infrastructure.",
+        "Standardized the 5th generation mono-wire frame fabrication, incorporating 32 heavy-duty guide rollers for zero wire deviation.",
+        "Established rigid pre-dispatch testing protocols, verifying dynamic flywheel balance and hydraulic tension response under simulated full loads.",
+        "Personally supervised turnkey plant installations and commissioning for major stone processors across Rajasthan, Andhra Pradesh, and Karnataka.",
+        "Implemented rigorous Zero Defect Zero Effect (ZED) quality management practices throughout the fabrication plant.",
+      ],
+    },
+    areasOfResponsibility: [
+      {
+        title: "Machinery Manufacturing & Heavy Fabrication",
+        description:
+          "Oversees plate cutting, heavy multi-pass welding, stress relief, and gantry assembly across all machine categories.",
+        tags: ["Heavy Fabrication", "Weld Inspection", "Assembly Line"],
+      },
+      {
+        title: "Structural Alignment & Tolerance Inspection",
+        description:
+          "Ensures vertical pillars, flywheel shafts, and revolving block turntables meet strict sub-millimeter planar standards.",
+        tags: ["Tolerance Metrology", "Flywheel Balancing", "Guide Roller Setup"],
+      },
+      {
+        title: "Machine Tooling & Plant Equipment",
+        description:
+          "Directs operations of the in-house machine tool park, including HMT heavy-duty lathes and Swedish horizontal boring machinery.",
+        tags: ["HMT Tooling", "Boring Machining", "Plant Maintenance"],
+      },
+      {
+        title: "Turnkey Field Commissioning",
+        description:
+          "Coordinates field engineers and technicians during foundation setup, electrical cabling, hydraulic hookup, and trial stone cuts.",
+        tags: ["Site Commissioning", "Civil Layouts", "Field Engineering"],
+      },
+    ],
+    milestones: [
+      {
+        year: "Key Initiative",
+        title: "Machine Shop Modernization",
+        description:
+          "Integrated high-capacity Swedish horizontal boring machines and large-bed shapers into core fabrication workflows.",
+      },
+      {
+        year: "Key Initiative",
+        title: "Standardization of 32-Roller Guide Assembly",
+        description:
+          "Re-engineered vertical up/down carriage mechanics with 32 heavy-duty rollers, dramatically reducing wire flutter.",
+      },
+      {
+        year: "Key Initiative",
+        title: "Turnkey Cluster Commissioning Across India",
+        description:
+          "Supervised multi-machine installation projects across major stone corridors including Ongole, Martur, Hosur, and Bijoliya.",
+      },
+      {
+        year: "Quality Focus",
+        title: "ZED Quality Standard Implementation",
+        description:
+          "Embedded zero-defect fabrication controls on the shop floor, supporting company ZED quality certifications from Govt. of India.",
+      },
+    ],
+    relevantMachines: [
+      {
+        name: "LN 2500 PRO Mono Wire Saw",
+        series: "5th Generation Dual Dressing & Slicing",
+        href: "/machines/mono-wire-saw#ln-2500-pro",
+        description: "25 HP mono wire machine equipped with dual RPM vertical feed, wireless remote, and dressing plus slab cutting capability.",
+      },
+      {
+        name: "LN 6 Wire Multiwire Gangsaw",
+        series: "Thick Slab Processing Master",
+        href: "/machines/multiwire-saw#ln-6-wire",
+        description: "Rugged 40 HP multiwire system built for monuments, kerbstones, and heavy architectural thick slabs from 50 to 100 mm.",
       },
     ],
   },
