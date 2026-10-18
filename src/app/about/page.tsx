@@ -98,7 +98,7 @@ export default function AboutPage() {
             {/* Engineering Component Standards */}
             <div className="pt-1 flex flex-wrap items-center gap-2 text-[11px] font-mono text-[#A7ADB5]">
               <span className="text-[#EF4444] font-semibold uppercase tracking-wider">Component Standards:</span>
-              <span>Siemens • Schneider • NTN • FAG • PMI Linear • Crompton Greaves • Elecon</span>
+              <span>{company.vendors.map((v) => v.name).join(" • ")}</span>
             </div>
           </div>
 
@@ -126,10 +126,197 @@ export default function AboutPage() {
                   500+ Machines Built
                 </span>
               </div>
-              <p className="text-[#A7ADB5] text-[11px] leading-relaxed">
-                Founded by <strong className="text-white">Mr. Laxmi Narayan Jangid</strong> (30+ years manufacturing experience), LN Engineering is directed alongside technical and marketing heads <strong className="text-white">Mr. Narendra Jangid</strong> (B.E. Mechanical, Technical Head) and <strong className="text-white">Mr. Mahendra Jangid</strong> (B.E. Mechanical &amp; MBA, Marketing Head).
-              </p>
+              <div className="flex gap-4 items-center">
+                <div className="relative w-20 h-20 rounded-xl overflow-hidden border border-[#202326] shrink-0 bg-[#101112]">
+                  <Image
+                    src="/images/about/laxmi-narayan-jangid-office.webp"
+                    alt="Founder Mr. Laxmi Narayan Jangid at LN Engineering Rajsamand Works office"
+                    fill
+                    sizes="80px"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <p className="text-[#A7ADB5] text-[11px] leading-relaxed">
+                    Founded by <strong className="text-white">Mr. Laxmi Narayan Jangid</strong> (30+ years manufacturing experience; active since 1980), directed with <strong className="text-white">Mr. Narendra Jangid</strong> (B.E. Mechanical) and <strong className="text-white">Mr. Mahendra Jangid</strong> (B.E. Mechanical &amp; MBA).
+                  </p>
+                  <a
+                    href="#leadership"
+                    className="inline-flex items-center gap-1 text-[11px] font-mono font-medium text-[#EF4444] hover:underline uppercase tracking-wider pt-0.5"
+                  >
+                    View Executive Leadership Profiles &rarr;
+                  </a>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =====================================================================
+          AUTHENTIC LEADERSHIP & TECHNICAL HEADS (Verified from gangsawmachines.com)
+          ===================================================================== */}
+      <section id="leadership" className="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
+        <div className="border-b border-[#202326] pb-6 space-y-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#191B1D] border border-[#202326] rounded-full text-xs text-[#E8E5DF]">
+            <span className="w-2 h-2 rounded-full bg-[#EF4444]"></span>
+            <span className="font-mono text-[11px] uppercase tracking-wider">Executive Leadership & Partners</span>
+          </div>
+
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold uppercase text-white tracking-tight leading-tight">
+            The Engineering Leadership Behind Accuracy Master
+          </h2>
+
+          <p className="text-sm sm:text-base text-[#A7ADB5] max-w-3xl leading-relaxed">
+            LN Engineering is steered by qualified mechanical engineers and an industry veteran active in stone processing machinery since 1980. With over 500+ machines successfully built and commissioned across India and global export markets, our leadership combines classical foundry research with modern PLC automation.
+          </p>
+        </div>
+
+        {/* 3 Authentic Leadership Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {company.leadership.map((leader, idx) => (
+            <div
+              key={leader.name}
+              className="bg-[#141618] border border-[#202326] rounded-2xl overflow-hidden flex flex-col group hover:border-[#EF4444]/40 transition-all duration-300 shadow-xl"
+            >
+              {/* Leader Portrait */}
+              <div className="relative aspect-[4/5] w-full bg-[#101112] overflow-hidden border-b border-[#202326]">
+                <Image
+                  src={leader.image}
+                  alt={leader.imageAlt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  priority={idx === 0}
+                />
+                {/* Top Badge Overlay */}
+                <div className="absolute top-3 left-3 bg-[#101112]/90 backdrop-blur-md border border-white/10 px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider text-white">
+                  {leader.badge}
+                </div>
+                {/* Bottom Verified Caption */}
+                <div className="absolute bottom-2 left-2 right-2 bg-[#101112]/85 backdrop-blur-md px-3 py-1.5 rounded-lg text-[10px] text-white font-mono flex items-center justify-between">
+                  <span>Authentic Portrait</span>
+                  <span className="text-[#EF4444]">LN Leadership</span>
+                </div>
+              </div>
+
+              {/* Leader Details */}
+              <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+                <div className="space-y-3">
+                  <div className="space-y-1">
+                    <h3 className="font-display text-xl sm:text-2xl font-bold uppercase text-white tracking-tight">
+                      {leader.name}
+                    </h3>
+                    <p className="text-xs font-mono font-semibold text-[#EF4444] uppercase tracking-wider">
+                      {leader.role}
+                    </p>
+                  </div>
+
+                  {"experience" in leader && leader.experience && (
+                    <div className="inline-block text-[11px] font-mono text-[#E8E5DF] bg-[#191B1D] px-2.5 py-1 rounded border border-[#202326]">
+                      {leader.experience}
+                    </div>
+                  )}
+
+                  {"qualification" in leader && leader.qualification && (
+                    <div className="inline-block text-[11px] font-mono text-[#E8E5DF] bg-[#191B1D] px-2.5 py-1 rounded border border-[#202326]">
+                      {leader.qualification}
+                    </div>
+                  )}
+
+                  <p className="text-xs text-[#A7ADB5] leading-relaxed pt-1">
+                    {leader.bio}
+                  </p>
+                </div>
+
+                {/* Core Responsibilities */}
+                <div className="pt-3 border-t border-[#202326] space-y-2">
+                  <span className="font-mono text-[10px] uppercase tracking-wider text-white font-semibold block">
+                    Core Operational Focus:
+                  </span>
+                  <ul className="space-y-1.5 text-[11px] text-[#A7ADB5] font-mono">
+                    {leader.responsibilities.map((resp, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#EF4444] mt-1.5 shrink-0"></span>
+                        <span>{resp}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Administration & Executive Management Card */}
+        <div className="bg-[#141618] border border-[#202326] rounded-2xl p-6 sm:p-8 space-y-6 shadow-xl">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#202326] pb-4">
+            <div className="space-y-1">
+              <span className="font-mono text-[10px] font-semibold text-[#EF4444] uppercase tracking-widest block">
+                Executive Administration & Operations
+              </span>
+              <h3 className="font-display text-lg sm:text-xl font-bold uppercase text-white tracking-tight">
+                Corporate Governance & Management Holders
+              </h3>
+            </div>
+            <span className="text-[11px] font-mono text-[#A7ADB5] bg-[#191B1D] px-3 py-1.5 rounded-full border border-[#202326] self-start sm:self-auto">
+              Rajsamand Works, Rajasthan
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {company.management.map((mgmt) => (
+              <div
+                key={mgmt.name}
+                className="bg-[#191B1D] border border-[#202326] p-5 rounded-xl space-y-2"
+              >
+                <div className="flex items-center justify-between">
+                  <h4 className="font-display text-base font-bold text-white uppercase tracking-tight">
+                    {mgmt.name}
+                  </h4>
+                  <span className="text-[10px] font-mono text-[#EF4444] bg-[#EF4444]/10 px-2 py-0.5 rounded">
+                    {mgmt.qualification}
+                  </span>
+                </div>
+                <p className="text-xs text-[#A7ADB5] font-mono">
+                  {mgmt.role}
+                </p>
+                <p className="text-[11px] text-[#9CA3AF] leading-relaxed">
+                  Directing executive administrative workflows, statutory compliance, corporate finance, and commercial software coordination across the Rajsamand plant.
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Component Partners & Tier-1 Engineering Vendors */}
+        <div className="bg-[#0E1012] border border-[#202326] rounded-2xl p-6 sm:p-8 space-y-6 shadow-xl">
+          <div className="space-y-2">
+            <span className="font-mono text-[10px] font-semibold text-[#EF4444] uppercase tracking-widest block">
+              Tier-1 Component Partners & Vendors
+            </span>
+            <h3 className="font-display text-xl sm:text-2xl font-bold uppercase text-white tracking-tight">
+              Verified Technical Engineering Partners
+            </h3>
+            <p className="text-xs text-[#A7ADB5] max-w-2xl leading-relaxed">
+              LN Engineering integrates world-class precision components across every wire saw and gangsaw machine, ensuring international reliability, micro-stepping accuracy, and rapid worldwide spare-parts availability.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {company.vendors.map((vendor) => (
+              <div
+                key={vendor.name}
+                className="bg-[#141618] border border-[#202326] p-4 rounded-xl space-y-1 hover:border-[#EF4444]/40 transition-colors"
+              >
+                <span className="font-display text-sm sm:text-base font-bold text-white uppercase block tracking-wider">
+                  {vendor.name}
+                </span>
+                <span className="font-mono text-[10px] text-[#A7ADB5] block leading-tight">
+                  {vendor.category}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
