@@ -153,7 +153,7 @@ export default function HomePage() {
                   <span className="font-mono text-[10px] text-[#A7ADB5] uppercase tracking-wider block mt-1">DUAL FLYWHEEL</span>
                 </div>
                 <div className="bg-[#16181B]/80 border border-white/10 px-4 py-3 rounded-xl backdrop-blur-md shadow-lg">
-                  <span className="font-display text-xl sm:text-2xl font-bold text-[#C82032] block">50 Tonnes</span>
+                  <span className="font-display text-xl sm:text-2xl font-bold text-[#EF4444] block">50 Tonnes</span>
                   <span className="font-mono text-[10px] text-[#A7ADB5] uppercase tracking-wider block mt-1">REVOLVING TROLLEY</span>
                 </div>
                 <div className="bg-[#16181B]/80 border border-white/10 px-4 py-3 rounded-xl backdrop-blur-md shadow-lg">
@@ -231,25 +231,25 @@ export default function HomePage() {
             {/* Right Verified Badges (5 Cols) */}
             <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
               <div className="bg-[#101112] border border-white/10 p-5 rounded-xl space-y-1.5">
-                <span className="text-[#C82032] text-2xl font-bold block">120+</span>
+                <span className="text-[#EF4444] text-2xl font-bold block">120+</span>
                 <span className="text-white font-semibold block text-xs uppercase">Operating Machines</span>
                 <span className="text-[#A7ADB5] text-[11px] block">Verified operational track record</span>
               </div>
 
               <div className="bg-[#101112] border border-white/10 p-5 rounded-xl space-y-1.5">
-                <span className="text-[#C82032] text-2xl font-bold block">ZED</span>
+                <span className="text-[#EF4444] text-2xl font-bold block">ZED</span>
                 <span className="text-white font-semibold block text-xs uppercase">Govt. of India</span>
                 <span className="text-[#A7ADB5] text-[11px] block">Zero Defect Zero Effect certified</span>
               </div>
 
               <div className="bg-[#101112] border border-white/10 p-5 rounded-xl space-y-1.5">
-                <span className="text-[#C82032] text-2xl font-bold block">50 T</span>
+                <span className="text-[#EF4444] text-2xl font-bold block">50 T</span>
                 <span className="text-white font-semibold block text-xs uppercase">Trolley Capacity</span>
                 <span className="text-[#A7ADB5] text-[11px] block">Heavy revolving block turntable</span>
               </div>
 
               <div className="bg-[#101112] border border-white/10 p-5 rounded-xl space-y-1.5">
-                <span className="text-[#C82032] text-2xl font-bold block">Global</span>
+                <span className="text-[#EF4444] text-2xl font-bold block">Global</span>
                 <span className="text-white font-semibold block text-xs uppercase">Export Reach</span>
                 <span className="text-[#A7ADB5] text-[11px] block">India • Egypt • Azerbaijan • Nepal</span>
               </div>

@@ -109,8 +109,8 @@ export default function GlobalWorldMap() {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-8">
         <div className="space-y-3 max-w-2xl">
           <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-[#191B1D] border border-white/10 rounded-full">
-            <span className="w-2 h-2 rounded-full bg-[#C82032] inline-block animate-pulse"></span>
-            <span className="font-mono text-[11px] font-semibold tracking-[0.2em] text-[#C82032] uppercase">
+            <span className="w-2 h-2 rounded-full bg-[#EF4444] inline-block animate-pulse"></span>
+            <span className="font-mono text-[11px] font-semibold tracking-[0.2em] text-[#EF4444] uppercase">
               PRECISION ENGINEERING. GLOBAL AMBITION.
             </span>
           </div>
@@ -127,7 +127,7 @@ export default function GlobalWorldMap() {
         {/* Global Stats Pill */}
         <div className="flex flex-wrap gap-4 text-xs font-mono">
           <div className="bg-[#191B1D] border border-white/10 px-4 py-3 rounded-xl">
-            <span className="text-[#C82032] text-xl font-bold block">120+</span>
+            <span className="text-[#EF4444] text-xl font-bold block">120+</span>
             <span className="text-white font-medium block uppercase text-[11px]">Operating Units</span>
             <span className="text-[#A7ADB5] text-[10px]">Verified field track record</span>
           </div>
