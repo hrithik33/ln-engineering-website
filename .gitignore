@@ -48,3 +48,8 @@ next-env.d.ts
 
 # large raw archives exceeding GitHub 100MB limit (optimized version is included)
 public/documents/ln-engineering-catalogue.pdf
+
+# lighthouse and performance audit artifacts
+*-mobile.json
+*-desktop.json
+lighthouse-*.json

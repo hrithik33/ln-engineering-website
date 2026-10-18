@@ -56,7 +56,7 @@ export default function MachinesOverviewPage() {
         <Breadcrumbs items={[{ label: "Machines Catalog" }]} />
 
         <div className="border-b border-white/10 pb-8 space-y-3">
-          <span className="font-mono text-xs font-semibold tracking-[0.2em] text-[#C82032] uppercase block">
+          <span className="font-mono text-xs font-semibold tracking-[0.2em] text-[#EF4444] uppercase block">
             Product Catalog & Equipment Overview
           </span>
           <h1 className="font-display text-5xl sm:text-6xl md:text-7xl font-semibold uppercase text-white tracking-tight leading-tight">
@@ -73,7 +73,7 @@ export default function MachinesOverviewPage() {
             <Link
               key={cat.id}
               href={`#${cat.slug}`}
-              className="px-4 py-2 bg-[#191B1D] hover:bg-[#202326] border border-white/10 text-xs font-mono font-medium text-[#F5F5F5] hover:text-[#C82032] rounded-xl transition-colors uppercase tracking-wider"
+              className="px-4 py-2 bg-[#191B1D] hover:bg-[#202326] border border-white/10 text-xs font-mono font-medium text-[#F5F5F5] hover:text-[#EF4444] rounded-xl transition-colors uppercase tracking-wider"
             >
               {cat.name}
             </Link>
@@ -88,13 +88,13 @@ export default function MachinesOverviewPage() {
             {/* Category Header Card */}
             <div className="bg-[#191B1D] border border-white/10 rounded-2xl p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-xl">
               <div className="lg:col-span-8 space-y-3">
-                <span className="font-mono text-[11px] font-semibold tracking-[0.2em] text-[#C82032] uppercase block">
+                <span className="font-mono text-[11px] font-semibold tracking-[0.2em] text-[#EF4444] uppercase block">
                   Machine Family
                 </span>
                 <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold uppercase text-white tracking-tight">
                   {category.name}
                 </h2>
-                <p className="font-mono text-xs text-[#C82032] uppercase tracking-wider font-semibold">
+                <p className="font-mono text-xs text-[#EF4444] uppercase tracking-wider font-semibold">
                   {category.tagline}
                 </p>
                 <p className="text-xs sm:text-sm text-[#A7ADB5] leading-relaxed">

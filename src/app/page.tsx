@@ -76,12 +76,14 @@ export default function HomePage() {
         {/* Genuine Red LN Machinery Photography Hero Background (Industrial Stone Cutting Under Spray) */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero/industrial-stone-cutting-spray.jpg"
+            src="/images/hero/industrial-stone-cutting-spray.webp"
             alt="LN Engineering Industrial Stone-Cutting Machine Under High-Pressure Water Spray"
             fill
             priority
-            sizes="100vw"
-            className="object-cover object-center sm:object-[center_35%] filter brightness-[0.88] contrast-[1.04] transform scale-[1.01]"
+            fetchPriority="high"
+            sizes="(max-width: 768px) 100vw, 100vw"
+            quality={82}
+            className="object-cover object-center sm:object-[center_35%] filter brightness-[0.88] contrast-[1.04]"
           />
           {/* Subtle Cinematic Black Gradient Overlay: darker on left for text readability, lighter on right for machinery vibrancy */}
           <div className="absolute inset-0 bg-[#0C0D0F]/25" />
@@ -97,9 +99,9 @@ export default function HomePage() {
         <div className="relative z-10 max-w-[1420px] mx-auto px-4 sm:px-8 py-8 sm:py-14 w-full my-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
             {/* Left Column (Headline & Eyebrow) */}
-            <div className="lg:col-span-7 space-y-4 sm:space-y-6 animate-fade-in-up">
+            <div className="lg:col-span-7 space-y-4 sm:space-y-6">
               <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-[#181A1D]/80 border border-white/10 rounded-full backdrop-blur-md">
-                <span className="w-2 h-2 rounded-full bg-[#C82032] inline-block animate-pulse"></span>
+                <span className="w-2 h-2 rounded-full bg-[#E02D40] inline-block"></span>
                 <span className="font-mono text-[11px] sm:text-xs font-semibold tracking-[0.25em] text-[#C5CBD3] uppercase">
                   PRECISION STONE ENGINEERING
                 </span>
@@ -114,7 +116,7 @@ export default function HomePage() {
             </div>
 
             {/* Right Column (Supporting Summary, CTAs, Technical Cards) */}
-            <div className="lg:col-span-5 space-y-5 lg:pb-2 animate-fade-in-up">
+            <div className="lg:col-span-5 space-y-5 lg:pb-2">
               <p className="text-sm sm:text-base md:text-[17px] text-white/95 font-normal leading-relaxed max-w-xl">
                 High-precision stone processing machinery manufactured in Rajsamand, India. From 5th generation mono wire saws and multiwire gangsaws to Siemens CNC profiling centers, LN Engineering delivers dependable cutting performance for natural stone plants worldwide.
               </p>
@@ -193,7 +195,7 @@ export default function HomePage() {
             {/* Left Narrative (7 Cols) */}
             <div className="lg:col-span-7 space-y-5">
               <div className="space-y-2">
-                <span className="font-mono text-xs font-semibold tracking-[0.2em] text-[#C82032] uppercase block">
+                <span className="font-mono text-xs font-semibold tracking-[0.2em] text-[#EF4444] uppercase block">
                   About LN Engineering
                 </span>
                 <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold uppercase text-white tracking-tight leading-tight">
@@ -212,7 +214,7 @@ export default function HomePage() {
               <div className="pt-2 flex flex-wrap gap-4">
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#C82032] hover:text-white transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#EF4444] hover:text-white transition-colors"
                 >
                   <span>Read Corporate Profile & Milestones &rarr;</span>
                 </Link>
@@ -262,7 +264,7 @@ export default function HomePage() {
       <section className="py-20 px-4 sm:px-8 max-w-7xl mx-auto space-y-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-6">
           <div className="space-y-2">
-            <span className="font-mono text-[11px] font-semibold tracking-[0.2em] text-[#C82032] uppercase">
+            <span className="font-mono text-[11px] font-semibold tracking-[0.2em] text-[#EF4444] uppercase">
               Product Catalogue
             </span>
             <h2 className="font-display text-4xl sm:text-5xl font-semibold uppercase text-white tracking-tight">
@@ -275,7 +277,7 @@ export default function HomePage() {
 
           <Link
             href="/machines"
-            className="text-xs font-mono font-semibold uppercase tracking-wider text-[#F5F5F5] hover:text-[#C82032] inline-flex items-center gap-1.5 transition-colors"
+            className="text-xs font-mono font-semibold uppercase tracking-wider text-[#F5F5F5] hover:text-[#EF4444] inline-flex items-center gap-1.5 transition-colors"
           >
             <span>View All Machinery &rarr;</span>
           </Link>
@@ -304,7 +306,7 @@ export default function HomePage() {
                   <h3 className="font-display text-2xl font-semibold uppercase text-white tracking-tight group-hover:text-[#F5F5F5] transition-colors">
                     {category.name}
                   </h3>
-                  <p className="font-mono text-xs text-[#C82032] uppercase tracking-wider font-semibold mb-2">
+                  <p className="font-mono text-xs text-[#EF4444] uppercase tracking-wider font-semibold mb-2">
                     {category.tagline}
                   </p>
                   <p className="text-xs text-[#A7ADB5] leading-relaxed">
@@ -313,12 +315,12 @@ export default function HomePage() {
                 </div>
 
                 <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-                  <span className="font-mono text-[11px] text-[#7E8691] uppercase">
+                  <span className="font-mono text-[11px] text-[#A7ADB5] uppercase">
                     {category.models.length} {category.models.length === 1 ? "Model" : "Models"}
                   </span>
                   <Link
                     href={category.slug === "wire-rope" ? "/products/wire-rope" : `/machines/${category.slug}`}
-                    className="font-sans text-xs font-semibold uppercase tracking-wider text-white hover:text-[#C82032] inline-flex items-center gap-1 transition-colors"
+                    className="font-sans text-xs font-semibold uppercase tracking-wider text-white hover:text-[#EF4444] inline-flex items-center gap-1 transition-colors"
                   >
                     <span>Explore &rarr;</span>
                   </Link>
@@ -335,7 +337,7 @@ export default function HomePage() {
       <section className="bg-[#101112] border-y border-white/10 py-20 px-4 sm:px-8">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center max-w-2xl mx-auto space-y-3">
-            <span className="font-mono text-[11px] font-semibold tracking-[0.2em] text-[#C82032] uppercase">
+            <span className="font-mono text-[11px] font-semibold tracking-[0.2em] text-[#EF4444] uppercase">
               Engineered for Endurance
             </span>
             <h2 className="font-display text-4xl sm:text-5xl font-semibold uppercase text-white tracking-tight">
@@ -353,7 +355,7 @@ export default function HomePage() {
                 className="bg-[#191B1D] border border-white/10 p-6 rounded-2xl space-y-4 hover:border-white/20 transition-colors"
               >
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs font-bold text-[#C82032]">{hl.number}</span>
+                  <span className="font-mono text-xs font-bold text-[#EF4444]">{hl.number}</span>
                   <span className="font-mono text-[10px] text-[#A7ADB5] bg-[#101112] px-2 py-0.5 rounded border border-white/10 uppercase">
                     {hl.metric}
                   </span>

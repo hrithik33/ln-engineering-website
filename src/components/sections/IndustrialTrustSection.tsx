@@ -56,7 +56,7 @@ export default function IndustrialTrustSection({
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-6">
         <div className="space-y-2">
-          <span className="font-mono text-[11px] font-semibold tracking-[0.2em] text-[#C82032] uppercase block">
+          <span className="font-mono text-[11px] font-semibold tracking-[0.2em] text-[#EF4444] uppercase block">
             Manufacturing Rigor &amp; Global Footprint
           </span>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold uppercase text-white tracking-tight">
@@ -68,8 +68,8 @@ export default function IndustrialTrustSection({
         </div>
 
         <div className="flex items-center gap-3">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#191B1D] border border-white/10 rounded-full text-xs font-mono text-[#C82032]">
-            <span className="w-2 h-2 rounded-full bg-[#C82032] animate-pulse"></span>
+          <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#191B1D] border border-white/10 rounded-full text-xs font-mono text-[#EF4444]">
+            <span className="w-2 h-2 rounded-full bg-[#EF4444] animate-pulse"></span>
             <span>ZED Bronze Certified</span>
           </span>
         </div>
@@ -78,7 +78,7 @@ export default function IndustrialTrustSection({
       {/* 1. Manufacturing Tooling & Plant Standards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-[#151719] border border-white/10 p-6 rounded-2xl space-y-3 shadow-md">
-          <div className="w-10 h-10 rounded-xl bg-[#C82032]/10 border border-[#C82032]/30 flex items-center justify-center text-[#C82032] font-mono font-bold text-sm">
+          <div className="w-10 h-10 rounded-xl bg-[#EF4444]/10 border border-[#EF4444]/30 flex items-center justify-center text-[#EF4444] font-mono font-bold text-sm">
             01
           </div>
           <h3 className="font-display text-xl font-semibold uppercase text-white tracking-wide">
@@ -93,7 +93,7 @@ export default function IndustrialTrustSection({
         </div>
 
         <div className="bg-[#151719] border border-white/10 p-6 rounded-2xl space-y-3 shadow-md">
-          <div className="w-10 h-10 rounded-xl bg-[#C82032]/10 border border-[#C82032]/30 flex items-center justify-center text-[#C82032] font-mono font-bold text-sm">
+          <div className="w-10 h-10 rounded-xl bg-[#EF4444]/10 border border-[#EF4444]/30 flex items-center justify-center text-[#EF4444] font-mono font-bold text-sm">
             02
           </div>
           <h3 className="font-display text-xl font-semibold uppercase text-white tracking-wide">
@@ -108,7 +108,7 @@ export default function IndustrialTrustSection({
         </div>
 
         <div className="bg-[#151719] border border-white/10 p-6 rounded-2xl space-y-3 shadow-md">
-          <div className="w-10 h-10 rounded-xl bg-[#C82032]/10 border border-[#C82032]/30 flex items-center justify-center text-[#C82032] font-mono font-bold text-sm">
+          <div className="w-10 h-10 rounded-xl bg-[#EF4444]/10 border border-[#EF4444]/30 flex items-center justify-center text-[#EF4444] font-mono font-bold text-sm">
             03
           </div>
           <h3 className="font-display text-xl font-semibold uppercase text-white tracking-wide">
@@ -172,7 +172,7 @@ export default function IndustrialTrustSection({
         <div className="bg-[#151719] border border-white/10 rounded-2xl p-6 sm:p-10 shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 space-y-3">
-              <span className="font-mono text-xs font-semibold tracking-wider text-[#C82032] uppercase block">
+              <span className="font-mono text-xs font-semibold tracking-wider text-[#EF4444] uppercase block">
                 Technical Documentation Center
               </span>
               <h3 className="font-display text-2xl sm:text-3xl font-semibold uppercase text-white tracking-tight">
@@ -188,7 +188,7 @@ export default function IndustrialTrustSection({
                 href="/documents/product-catalogue.pdf"
                 download="LN_Engineering_Product_Catalogue.pdf"
                 className="min-h-[44px] px-5 py-3 bg-[#C82032] hover:bg-[#D92639] text-white rounded-xl text-xs font-semibold uppercase tracking-wider transition-colors inline-flex items-center justify-center gap-2.5 shadow-lg shadow-[#C82032]/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C82032]"
-                aria-label="Download Official Product Catalogue PDF (41 MB)"
+                aria-label="Product Catalogue (41 MB PDF)"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5h-2v1.5h2c.55 0 1-.45 1-1s-.45-.5-1-.5zm0-3h-2v1.5h2c.55 0 1-.45 1-1s-.45-.5-1-.5zm5 4.5h-1.5v-4h1.5c.83 0 1.5.67 1.5 1.5v1c0 .83-.67 1.5-1.5 1.5zm4.5-2.5h-1.5v1h1.5v1.5h-1.5V14h-1.5V8.5h3v1.5z"/>
@@ -200,9 +200,9 @@ export default function IndustrialTrustSection({
                 href="/documents/ln-engineering-catalogue-optimized.pdf"
                 download="LN_Engineering_Master_Catalogue.pdf"
                 className="min-h-[44px] px-5 py-3 bg-[#191B1D] hover:bg-[#202326] text-white border border-white/15 rounded-xl text-xs font-semibold uppercase tracking-wider transition-colors inline-flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-                aria-label="Download LN Engineering Master Catalogue PDF (3.8 MB)"
+                aria-label="Master Catalogue (3.8 MB PDF)"
               >
-                <svg className="w-4 h-4 fill-current text-[#C82032]" viewBox="0 0 24 24" aria-hidden="true">
+                <svg className="w-4 h-4 fill-current text-[#EF4444]" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5h-2v1.5h2c.55 0 1-.45 1-1s-.45-.5-1-.5zm0-3h-2v1.5h2c.55 0 1-.45 1-1s-.45-.5-1-.5zm5 4.5h-1.5v-4h1.5c.83 0 1.5.67 1.5 1.5v1c0 .83-.67 1.5-1.5 1.5zm4.5-2.5h-1.5v1h1.5v1.5h-1.5V14h-1.5V8.5h3v1.5z"/>
                 </svg>
                 <span>Master Catalogue (3.8 MB)</span>

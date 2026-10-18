@@ -47,7 +47,7 @@ export default function Header() {
           >
             <div className="relative w-10 h-10 sm:w-11 sm:h-11 bg-white rounded-xl p-1.5 flex items-center justify-center shadow-md flex-shrink-0 group-hover:scale-105 transition-transform duration-200">
               <Image
-                src="/images/brand/logo.png"
+                src="/images/brand/logo.webp"
                 alt="LN Engineering Official Logo"
                 width={40}
                 height={40}

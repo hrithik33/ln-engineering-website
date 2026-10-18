@@ -17,12 +17,12 @@ export default function FloatingWhatsApp() {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat with us on WhatsApp"
-        title="Chat with us on WhatsApp"
-        className="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full shadow-[0_4px_14px_rgba(0,0,0,0.4)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.4)] transition-all duration-200 ease-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#25D366] focus:ring-offset-[#101112] active:scale-95"
+        aria-label="Chat with LN Engineering on WhatsApp"
+        title="Chat with LN Engineering on WhatsApp"
+        className="flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full shadow-[0_4px_14px_rgba(0,0,0,0.4)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.4)] transition-all duration-200 ease-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#25D366] focus:ring-offset-[#101112] active:scale-95"
       >
-        {/* Official WhatsApp Brand Icon via FaWhatsapp (20-22px) */}
-        <FaWhatsapp className="w-5 h-5 sm:w-[22px] sm:h-[22px] text-white flex-shrink-0" aria-hidden="true" />
+        {/* Official WhatsApp Brand Icon via FaWhatsapp (22-24px) */}
+        <FaWhatsapp className="w-5 h-5 sm:w-6 sm:h-6 text-white flex-shrink-0" aria-hidden="true" />
       </a>
     </div>
   );

@@ -328,8 +328,8 @@ export default function CleanMachineDetail({
           <div className="lg:col-span-7 space-y-5">
             {/* Small red product category label */}
             <div className="inline-flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#C82032]"></span>
-              <span className="font-mono text-xs font-semibold tracking-wider text-[#C82032] uppercase">
+              <span className="w-2 h-2 rounded-full bg-[#EF4444]"></span>
+              <span className="font-mono text-xs font-semibold tracking-wider text-[#EF4444] uppercase">
                 {categoryName} • {activeModel.series}
               </span>
             </div>
@@ -454,7 +454,7 @@ export default function CleanMachineDetail({
         <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-6">
           <div className="border-b border-white/10 pb-4 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
             <div>
-              <span className="font-mono text-xs font-semibold tracking-wider text-[#C82032] uppercase block">
+              <span className="font-mono text-xs font-semibold tracking-wider text-[#EF4444] uppercase block">
                 Operational Suitability
               </span>
               <h2 className="font-display text-2xl sm:text-3xl font-semibold uppercase text-white tracking-tight">
@@ -472,7 +472,7 @@ export default function CleanMachineDetail({
                 key={i}
                 className="bg-[#151719] border border-white/10 p-5 rounded-xl space-y-2.5 shadow-sm flex flex-col justify-between"
               >
-                <div className="flex items-center gap-2.5 text-[#C82032]">
+                <div className="flex items-center gap-2.5 text-[#EF4444]">
                   <svg className="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
@@ -522,7 +522,7 @@ export default function CleanMachineDetail({
       <div id="specs" className="max-w-7xl mx-auto px-4 sm:px-8 space-y-6 scroll-mt-36">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/10 pb-4">
           <div>
-            <span className="font-mono text-xs font-semibold tracking-wider text-[#C82032] uppercase block">
+            <span className="font-mono text-xs font-semibold tracking-wider text-[#EF4444] uppercase block">
               Factory Documentation
             </span>
             <h2 className="font-display text-2xl sm:text-3xl font-semibold uppercase text-white tracking-tight">
@@ -533,10 +533,10 @@ export default function CleanMachineDetail({
           <a
             href="/documents/product-catalogue.pdf"
             download="LN_Engineering_Product_Catalogue.pdf"
-            className="text-xs font-mono font-medium text-[#C82032] hover:text-white inline-flex items-center gap-2 px-3.5 py-2 bg-[#191B1D] border border-white/10 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C82032]"
-            aria-label="Download Official Product Catalogue PDF (41 MB)"
+            className="text-xs font-mono font-medium text-[#EF4444] hover:text-white inline-flex items-center gap-2 px-3.5 py-2 bg-[#191B1D] border border-white/10 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#EF4444]"
+            aria-label="Download Product Catalogue (PDF, 41 MB)"
           >
-            <svg className="w-4 h-4 text-[#C82032]" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 text-[#EF4444]" fill="currentColor" viewBox="0 0 24 24">
               <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5h-2v1.5h2c.55 0 1-.45 1-1s-.45-.5-1-.5zm0-3h-2v1.5h2c.55 0 1-.45 1-1s-.45-.5-1-.5zm5 4.5h-1.5v-4h1.5c.83 0 1.5.67 1.5 1.5v1c0 .83-.67 1.5-1.5 1.5zm4.5-2.5h-1.5v1h1.5v1.5h-1.5V14h-1.5V8.5h3v1.5z"/>
             </svg>
             <span>Download Product Catalogue (PDF) &rarr;</span>
@@ -639,7 +639,7 @@ export default function CleanMachineDetail({
       <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-6 pt-4">
         <div className="border-b border-white/10 pb-4 flex items-end justify-between">
           <div>
-            <span className="font-mono text-xs font-semibold tracking-wider text-[#C82032] uppercase block">
+            <span className="font-mono text-xs font-semibold tracking-wider text-[#EF4444] uppercase block">
               Cross-Family Equipment
             </span>
             <h2 className="font-display text-2xl sm:text-3xl font-semibold uppercase text-white tracking-tight">

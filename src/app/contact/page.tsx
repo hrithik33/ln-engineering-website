@@ -89,14 +89,14 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
           {/* Left Column: Quotation Form (7 Cols) */}
           <div className="lg:col-span-7 bg-[#191B1D] border border-[#202326] rounded-2xl p-6 sm:p-8 space-y-6 shadow-xl">
             <div className="border-b border-[#202326] pb-4 space-y-1">
-              <span className="font-mono text-xs font-semibold tracking-widest text-[#C82032] uppercase block">
+              <span className="font-mono text-xs font-semibold tracking-widest text-[#EF4444] uppercase block">
                 Machine Quotation Form
               </span>
               <h2 className="font-display text-2xl sm:text-3xl font-semibold uppercase text-white tracking-tight">
                 Submit Your Cutting Requirements
               </h2>
               <p className="text-xs text-[#A7ADB5]">
-                Fields marked with <span className="text-[#C82032] font-bold">*</span> are required. Your details will only be used to prepare a technical proposal.
+                Fields marked with <span className="text-[#EF4444] font-bold">*</span> are required. Your details will only be used to prepare a technical proposal.
               </p>
             </div>
 
@@ -108,7 +108,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
             {/* Head Office Card */}
             <div className="bg-[#191B1D] border border-[#202326] rounded-2xl p-6 space-y-4 text-xs shadow-lg">
               <div className="flex items-center justify-between border-b border-[#202326] pb-3">
-                <span className="font-mono text-[11px] font-semibold text-[#C82032] uppercase tracking-wider">
+                <span className="font-mono text-[11px] font-semibold text-[#EF4444] uppercase tracking-wider">
                   Head Office & Manufacturing Works
                 </span>
                 <span className="w-2 h-2 rounded-full bg-[#25D366]" title="Operating Plant"></span>
@@ -182,7 +182,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
 
             {/* South India Sales Offices (Documented in Catalogue Page 16) */}
             <div className="bg-[#191B1D] border border-[#202326] rounded-2xl p-6 space-y-4 text-xs shadow-lg">
-              <span className="font-mono text-[11px] font-semibold text-[#C82032] uppercase tracking-wider block border-b border-[#202326] pb-3">
+              <span className="font-mono text-[11px] font-semibold text-[#EF4444] uppercase tracking-wider block border-b border-[#202326] pb-3">
                 South India Regional Sales Offices
               </span>
 
@@ -195,12 +195,12 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                   {company.regionalContacts[0].address}
                 </p>
                 <div className="pt-1">
-                  <span className="text-[#6B7280]">Representative: </span>
+                  <span className="text-[#9CA3AF]">Representative: </span>
                   <span className="text-white font-medium">{company.regionalContacts[0].contactPerson}</span>
                   {" • "}
                   <a
                     href={`tel:${company.regionalContacts[0].phone}`}
-                    className="text-[#C82032] hover:underline font-mono font-bold"
+                    className="text-[#EF4444] hover:underline font-mono font-bold"
                   >
                     {company.regionalContacts[0].phoneDisplay}
                   </a>
@@ -216,12 +216,12 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                   {company.regionalContacts[1].address}
                 </p>
                 <div className="pt-1">
-                  <span className="text-[#6B7280]">Representative: </span>
+                  <span className="text-[#9CA3AF]">Representative: </span>
                   <span className="text-white font-medium">{company.regionalContacts[1].contactPerson}</span>
                   {" • "}
                   <a
                     href={`tel:${company.regionalContacts[1].phone}`}
-                    className="text-[#C82032] hover:underline font-mono font-bold"
+                    className="text-[#EF4444] hover:underline font-mono font-bold"
                   >
                     {company.regionalContacts[1].phoneDisplay}
                   </a>
@@ -241,7 +241,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                 <a
                   href="/documents/ln-engineering-catalogue-optimized.pdf"
                   download
-                  className="text-[#C82032] hover:underline font-medium inline-flex items-center gap-1"
+                  className="text-[#EF4444] hover:underline font-medium inline-flex items-center gap-1"
                 >
                   <span>Download Web Catalogue (3.6 MB PDF) &rarr;</span>
                 </a>

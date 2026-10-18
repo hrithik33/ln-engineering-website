@@ -414,13 +414,13 @@ export default function GlobalWorldMap() {
                   href="/documents/product-catalogue.pdf"
                   download="LN_Engineering_Product_Catalogue.pdf"
                   className="w-full py-2.5 px-4 bg-[#101112] hover:bg-white/5 border border-white/15 text-[#E8E5DF] text-xs font-mono rounded-xl transition-all duration-200 text-center block"
-                  aria-label="Download Official Product Catalogue PDF (41 MB)"
+                  aria-label="Download Product Catalogue (PDF, 41 MB)"
                 >
                   Download Product Catalogue (PDF)
                 </a>
               </div>
 
-              <div className="text-[10px] font-mono text-[#6B7280] text-center pt-1">
+              <div className="text-[10px] font-mono text-[#9CA3AF] text-center pt-1">
                 Verified against official company records &amp; product catalogue
               </div>
             </div>
@@ -441,7 +441,7 @@ export default function GlobalWorldMap() {
               {geographicalPresence.national.map((region, idx) => (
                 <div key={region.state} className="flex items-center gap-1.5">
                   <span className="text-white font-medium">{region.state}:</span>
-                  <span className="text-[#6B7280]">
+                  <span className="text-[#9CA3AF]">
                     {region.locations.slice(0, 3).join(", ")}
                     {region.locations.length > 3 ? "..." : ""}
                   </span>

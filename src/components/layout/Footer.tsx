@@ -21,7 +21,7 @@ export default function Footer() {
             >
               <div className="w-11 h-11 bg-white rounded-lg p-1.5 flex items-center justify-center shrink-0 shadow-sm transition-transform duration-200 group-hover:scale-105">
                 <Image
-                  src="/images/brand/logo.png"
+                  src="/images/brand/logo.webp"
                   alt="LN Engineering Monogram"
                   width={40}
                   height={40}
@@ -103,12 +103,12 @@ export default function Footer() {
               <li>
                 <Link 
                   href="/machines/mono-wire-saw" 
-                  className="group block focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C82032] rounded p-0.5"
+                  className="group block focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#EF4444] rounded p-0.5"
                 >
-                  <span className="font-medium text-white group-hover:text-[#C82032] transition-colors block leading-snug">
+                  <span className="font-medium text-white group-hover:text-[#EF4444] transition-colors block leading-snug">
                     Mono Wire Saw Machines
                   </span>
-                  <span className="block text-[11px] font-mono text-[#7E8691] mt-0.5">
+                  <span className="block text-[11px] font-mono text-[#9CA3AF] mt-0.5">
                     LN 2500 • LN 2500 PRO • PROMAXX
                   </span>
                 </Link>
@@ -117,12 +117,12 @@ export default function Footer() {
               <li>
                 <Link 
                   href="/machines/multiwire-saw" 
-                  className="group block focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C82032] rounded p-0.5"
+                  className="group block focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#EF4444] rounded p-0.5"
                 >
-                  <span className="font-medium text-white group-hover:text-[#C82032] transition-colors block leading-snug">
+                  <span className="font-medium text-white group-hover:text-[#EF4444] transition-colors block leading-snug">
                     Multiwire Saw Machines
                   </span>
-                  <span className="block text-[11px] font-mono text-[#7E8691] mt-0.5">
+                  <span className="block text-[11px] font-mono text-[#9CA3AF] mt-0.5">
                     LN 6 Wire • LN 12 Wire • LN 22 Wire
                   </span>
                 </Link>
@@ -131,12 +131,12 @@ export default function Footer() {
               <li>
                 <Link 
                   href="/machines/cnc-wire-profile" 
-                  className="group block focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C82032] rounded p-0.5"
+                  className="group block focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#EF4444] rounded p-0.5"
                 >
-                  <span className="font-medium text-white group-hover:text-[#C82032] transition-colors block leading-snug">
+                  <span className="font-medium text-white group-hover:text-[#EF4444] transition-colors block leading-snug">
                     CNC Wire Profile Machines
                   </span>
-                  <span className="block text-[11px] font-mono text-[#7E8691] mt-0.5">
+                  <span className="block text-[11px] font-mono text-[#9CA3AF] mt-0.5">
                     LN HORI 2100 • LN CNC 2100 PROMAXX
                   </span>
                 </Link>
@@ -145,12 +145,12 @@ export default function Footer() {
               <li>
                 <Link 
                   href="/products/wire-rope" 
-                  className="group block focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C82032] rounded p-0.5"
+                  className="group block focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#EF4444] rounded p-0.5"
                 >
-                  <span className="font-medium text-white group-hover:text-[#C82032] transition-colors block leading-snug">
+                  <span className="font-medium text-white group-hover:text-[#EF4444] transition-colors block leading-snug">
                     Diamond Wire Rope
                   </span>
-                  <span className="block text-[11px] font-mono text-[#7E8691] mt-0.5">
+                  <span className="block text-[11px] font-mono text-[#9CA3AF] mt-0.5">
                     High-Speed Sintered & Vacuum Brazed
                   </span>
                 </Link>
@@ -160,7 +160,7 @@ export default function Footer() {
               <li className="pt-1">
                 <Link 
                   href="/machines" 
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#C82032] hover:text-red-400 transition-colors group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C82032] rounded"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#EF4444] hover:text-red-400 transition-colors group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#EF4444] rounded"
                 >
                   <span>Explore Full Machinery Range</span>
                   <svg 
@@ -216,11 +216,11 @@ export default function Footer() {
                 <a
                   href="/documents/product-catalogue.pdf"
                   download="LN_Engineering_Product_Catalogue.pdf"
-                  className="inline-flex items-center gap-2.5 px-3 py-2 rounded-lg bg-[#141618] border border-white/10 hover:border-[#C82032]/60 hover:bg-[#181A1C] text-xs text-zinc-300 hover:text-white transition-all group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C82032]"
-                  aria-label="Download Official Product Catalogue PDF (41 MB)"
+                  className="inline-flex items-center gap-2.5 px-3 py-2 rounded-lg bg-[#141618] border border-white/10 hover:border-[#EF4444]/60 hover:bg-[#181A1C] text-xs text-zinc-300 hover:text-white transition-all group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#EF4444]"
+                  aria-label="Product Catalogue (Stone Machinery 41 MB PDF)"
                 >
                   <svg 
-                    className="w-4 h-4 text-[#C82032] shrink-0" 
+                    className="w-4 h-4 text-[#EF4444] shrink-0" 
                     fill="currentColor" 
                     viewBox="0 0 24 24"
                     aria-hidden="true"
@@ -228,10 +228,10 @@ export default function Footer() {
                     <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5h-2v1.5h2c.55 0 1-.45 1-1s-.45-.5-1-.5zm0-3h-2v1.5h2c.55 0 1-.45 1-1s-.45-.5-1-.5zm5 4.5h-1.5v-4h1.5c.83 0 1.5.67 1.5 1.5v1c0 .83-.67 1.5-1.5 1.5zm4.5-2.5h-1.5v1h1.5v1.5h-1.5V14h-1.5V8.5h3v1.5z"/>
                   </svg>
                   <div>
-                    <span className="block font-medium text-white group-hover:text-[#C82032] transition-colors leading-none">
+                    <span className="block font-medium text-white group-hover:text-[#EF4444] transition-colors leading-none">
                       Product Catalogue
                     </span>
-                    <span className="block text-[10px] text-[#7E8691] font-mono mt-0.5">
+                    <span className="block text-[10px] text-[#9CA3AF] font-mono mt-0.5">
                       Stone Machinery • 41 MB PDF
                     </span>
                   </div>
@@ -250,56 +250,60 @@ export default function Footer() {
 
             <div className="space-y-3.5 text-xs">
               {/* Direct Inquiries */}
-              <div className="space-y-0.5">
-                <span className="text-[#7E8691] block text-[10px] font-mono uppercase tracking-wider">
+              <div className="space-y-1">
+                <span className="text-[#9CA3AF] block text-[10px] font-mono uppercase tracking-wider">
                   Direct Inquiries:
                 </span>
-                <a 
-                  href={`tel:${company.phones[0].number}`} 
-                  className="text-white hover:text-[#C82032] font-mono font-semibold block text-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C82032] rounded"
-                >
-                  {company.phones[0].display}
-                </a>
-                <a 
-                  href={`tel:${company.phones[1].number}`} 
-                  className="text-[#8E95A0] hover:text-[#C82032] font-mono block text-xs transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C82032] rounded"
-                >
-                  {company.phones[1].display}
-                </a>
+                <div className="flex flex-col gap-1.5">
+                  <a 
+                    href={`tel:${company.phones[0].number}`} 
+                    className="text-white hover:text-[#EF4444] font-mono font-semibold inline-flex items-center text-sm py-1 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#EF4444] rounded"
+                  >
+                    {company.phones[0].display}
+                  </a>
+                  <a 
+                    href={`tel:${company.phones[1].number}`} 
+                    className="text-[#9CA3AF] hover:text-[#EF4444] font-mono inline-flex items-center text-xs py-1 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#EF4444] rounded"
+                  >
+                    {company.phones[1].display}
+                  </a>
+                </div>
               </div>
 
               {/* Technical Email */}
-              <div className="space-y-0.5 pt-1">
-                <span className="text-[#7E8691] block text-[10px] font-mono uppercase tracking-wider">
+              <div className="space-y-1 pt-1">
+                <span className="text-[#9CA3AF] block text-[10px] font-mono uppercase tracking-wider">
                   Technical Email:
                 </span>
-                <a 
-                  href={`mailto:${company.emails[0].address}`} 
-                  className="text-zinc-200 hover:text-[#C82032] block font-mono text-xs break-all transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C82032] rounded"
-                >
-                  {company.emails[0].address}
-                </a>
-                <a 
-                  href={`mailto:${company.emails[1].address}`} 
-                  className="text-[#8E95A0] hover:text-[#C82032] block font-mono text-xs break-all transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C82032] rounded"
-                >
-                  {company.emails[1].address}
-                </a>
+                <div className="flex flex-col gap-1.5">
+                  <a 
+                    href={`mailto:${company.emails[0].address}`} 
+                    className="text-zinc-200 hover:text-[#EF4444] inline-flex items-center font-mono text-xs break-all py-1 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#EF4444] rounded"
+                  >
+                    {company.emails[0].address}
+                  </a>
+                  <a 
+                    href={`mailto:${company.emails[1].address}`} 
+                    className="text-[#9CA3AF] hover:text-[#EF4444] inline-flex items-center font-mono text-xs break-all py-1 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#EF4444] rounded"
+                  >
+                    {company.emails[1].address}
+                  </a>
+                </div>
               </div>
 
               {/* South India Sales Offices */}
               <div className="pt-3 border-t border-white/10 space-y-2">
-                <span className="text-[#C82032] font-semibold block text-[10px] font-mono uppercase tracking-wider">
+                <span className="text-[#EF4444] font-semibold block text-[10px] font-mono uppercase tracking-wider">
                   South India Sales Offices
                 </span>
                 
                 <div className="text-[11px] leading-snug">
                   <span className="text-zinc-200 font-medium block">Ongole, Andhra Pradesh:</span>
-                  <span className="text-[#8E95A0]">
+                  <span className="text-[#9CA3AF] block pt-0.5">
                     {company.regionalContacts[0].contactPerson}:{" "}
                     <a 
                       href={`tel:${company.regionalContacts[0].phone}`} 
-                      className="text-white hover:text-[#C82032] font-mono transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C82032] rounded"
+                      className="text-white hover:text-[#EF4444] font-mono inline-block py-1 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#EF4444] rounded"
                     >
                       {company.regionalContacts[0].phoneDisplay}
                     </a>
@@ -308,11 +312,11 @@ export default function Footer() {
 
                 <div className="text-[11px] leading-snug">
                   <span className="text-zinc-200 font-medium block">Martur, Andhra Pradesh:</span>
-                  <span className="text-[#8E95A0]">
+                  <span className="text-[#9CA3AF] block pt-0.5">
                     {company.regionalContacts[1].contactPerson}:{" "}
                     <a 
                       href={`tel:${company.regionalContacts[1].phone}`} 
-                      className="text-white hover:text-[#C82032] font-mono transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C82032] rounded"
+                      className="text-white hover:text-[#EF4444] font-mono inline-block py-1 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#EF4444] rounded"
                     >
                       {company.regionalContacts[1].phoneDisplay}
                     </a>

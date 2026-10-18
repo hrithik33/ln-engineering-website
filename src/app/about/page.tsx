@@ -53,7 +53,7 @@ export default function AboutPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
-            <span className="font-mono text-xs font-semibold tracking-widest text-[#C82032] uppercase block">
+            <span className="font-mono text-xs font-semibold tracking-widest text-[#EF4444] uppercase block">
               Vision & Engineering Philosophy
             </span>
             <h2 className="font-display text-3xl sm:text-4xl font-semibold uppercase text-white tracking-tight leading-tight">
@@ -128,7 +128,7 @@ export default function AboutPage() {
       <section className="bg-[#0E1012] border-y border-[#202326] py-20 px-4 sm:px-8">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center max-w-2xl mx-auto space-y-3">
-            <span className="font-mono text-[11px] font-semibold tracking-widest text-[#C82032] uppercase block">
+            <span className="font-mono text-[11px] font-semibold tracking-widest text-[#EF4444] uppercase block">
               Milestone Timeline
             </span>
             <h2 className="font-display text-3xl sm:text-4xl font-semibold uppercase text-white tracking-tight">
@@ -144,7 +144,7 @@ export default function AboutPage() {
               <div key={item.year + idx} className="relative pl-6 sm:pl-8 group">
                 {/* Year Marker Badge */}
                 <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-[#101112] border-2 border-[#C82032] group-hover:scale-125 transition-transform"></div>
-                <div className="sm:absolute sm:-left-36 md:-left-44 top-0 font-mono text-sm font-bold text-[#C82032]">
+                <div className="sm:absolute sm:-left-36 md:-left-44 top-0 font-mono text-sm font-bold text-[#EF4444]">
                   {item.year}
                 </div>
 
@@ -156,7 +156,7 @@ export default function AboutPage() {
                     {item.description}
                   </p>
                   {item.note && (
-                    <span className="block text-[10px] text-[#6B7280] italic pt-1 font-mono">
+                    <span className="block text-[10px] text-[#9CA3AF] italic pt-1 font-mono">
                       *{item.note}
                     </span>
                   )}
@@ -172,7 +172,7 @@ export default function AboutPage() {
           ===================================================================== */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8 space-y-8">
         <div className="border-b border-[#202326] pb-4 space-y-2">
-          <span className="font-mono text-xs font-semibold tracking-widest text-[#C82032] uppercase block">
+          <span className="font-mono text-xs font-semibold tracking-widest text-[#EF4444] uppercase block">
             Quality Credentials
           </span>
           <h2 className="font-display text-3xl sm:text-4xl font-semibold uppercase text-white tracking-tight">
@@ -191,7 +191,7 @@ export default function AboutPage() {
             >
               <div className="w-1.5 h-full bg-[#C82032] absolute left-0 top-0"></div>
               <div className="flex justify-between items-center text-xs">
-                <span className="text-[#C82032] font-mono font-bold text-sm">{cred.year}</span>
+                <span className="text-[#EF4444] font-mono font-bold text-sm">{cred.year}</span>
                 <span className="text-[10px] bg-[#101112] text-[#E8E5DF] px-2 py-0.5 rounded font-mono border border-[#202326]">
                   {cred.status}
                 </span>
@@ -210,7 +210,7 @@ export default function AboutPage() {
       <section className="bg-[#0E1012] border-y border-[#202326] py-20 px-4 sm:px-8">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center max-w-2xl mx-auto space-y-3">
-            <span className="font-mono text-[11px] font-semibold tracking-widest text-[#C82032] uppercase block">
+            <span className="font-mono text-[11px] font-semibold tracking-widest text-[#EF4444] uppercase block">
               Our Signature Across Stone Hubs
             </span>
             <h2 className="font-display text-3xl sm:text-4xl font-semibold uppercase text-white tracking-tight">
@@ -228,7 +228,7 @@ export default function AboutPage() {
                 <h3 className="font-display text-base font-bold text-white uppercase tracking-wider">
                   Domestic Installations Across India
                 </h3>
-                <span className="font-mono text-[11px] text-[#C82032] font-semibold">
+                <span className="font-mono text-[11px] text-[#EF4444] font-semibold">
                   20+ Major Hubs
                 </span>
               </div>
@@ -258,7 +258,7 @@ export default function AboutPage() {
                   <div key={i} className="bg-[#191B1D] p-3.5 rounded-xl border border-[#202326] space-y-0.5">
                     <div className="flex justify-between items-center">
                       <span className="font-semibold text-white">{countryName}</span>
-                      <span className="text-[10px] font-mono text-[#C82032] uppercase">Export Market</span>
+                      <span className="text-[10px] font-mono text-[#EF4444] uppercase">Export Market</span>
                     </div>
                     <span className="text-[11px] text-[#A7ADB5] block">Verified operational machinery</span>
                   </div>

@@ -37,12 +37,12 @@ export default function ProductCard({ product, className = "" }: ProductCardProp
               <h3 className="font-display text-2xl font-semibold uppercase text-white tracking-tight group-hover:text-[#F5F5F5] transition-colors">
                 {product.name}
               </h3>
-              <span className="font-mono text-[10px] text-[#C82032] font-semibold tracking-wider uppercase">
+              <span className="font-mono text-[10px] text-[#EF4444] font-semibold tracking-wider uppercase">
                 {product.categoryName}
               </span>
             </div>
 
-            <p className="font-mono text-xs text-[#C82032] uppercase tracking-wider mb-2 font-medium">
+            <p className="font-mono text-xs text-[#EF4444] uppercase tracking-wider mb-2 font-medium">
               {product.tagline}
             </p>
 
@@ -52,7 +52,7 @@ export default function ProductCard({ product, className = "" }: ProductCardProp
 
             {/* Quick Technical Specs Highlights */}
             <div className="space-y-2 pt-3 border-t border-white/10">
-              <span className="font-mono text-[10px] text-[#7E8691] uppercase tracking-wider font-semibold block">
+              <span className="font-mono text-[10px] text-[#9CA3AF] uppercase tracking-wider font-semibold block">
                 Key Parameters:
               </span>
               <ul className="space-y-1.5">

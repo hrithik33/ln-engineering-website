@@ -137,14 +137,14 @@ export default function QuoteForm({ initialMachine, onSuccess, className = "" }:
   if (status === "success") {
     return (
       <div className="bg-[#151719] border border-white/10 rounded-2xl p-8 text-center space-y-5 animate-fadeIn">
-        <div className="w-14 h-14 bg-[#C82032]/10 text-[#C82032] border border-[#C82032]/30 rounded-full mx-auto flex items-center justify-center">
+        <div className="w-14 h-14 bg-[#C82032]/10 text-[#EF4444] border border-[#EF4444]/30 rounded-full mx-auto flex items-center justify-center">
           <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
           </svg>
         </div>
 
         <div className="space-y-2">
-          <span className="text-xs font-semibold tracking-widest text-[#C82032] uppercase font-mono block">
+          <span className="text-xs font-semibold tracking-widest text-[#EF4444] uppercase font-mono block">
             Quotation Request Successfully Registered
           </span>
           <h3 className="text-2xl font-semibold text-white">Thank You, {formData.name}</h3>
@@ -271,7 +271,7 @@ export default function QuoteForm({ initialMachine, onSuccess, className = "" }:
 
       {status === "error" && (
         <div className="p-4 bg-red-950/40 border border-red-700/60 rounded-xl text-red-200 text-xs flex items-start gap-3">
-          <svg className="w-5 h-5 flex-shrink-0 text-[#C82032] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 flex-shrink-0 text-[#EF4444] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
           </svg>
           <div>
@@ -295,7 +295,7 @@ export default function QuoteForm({ initialMachine, onSuccess, className = "" }:
         {/* Name */}
         <div>
           <label htmlFor="name" className="block text-xs font-medium text-white mb-1.5">
-            Full Name <span className="text-[#C82032] font-bold">*</span>
+            Full Name <span className="text-[#EF4444] font-bold">*</span>
           </label>
           <input
             type="text"
@@ -349,7 +349,7 @@ export default function QuoteForm({ initialMachine, onSuccess, className = "" }:
         {/* Phone */}
         <div>
           <label htmlFor="phone" className="block text-xs font-medium text-white mb-1.5">
-            Telephone / WhatsApp Number <span className="text-[#C82032] font-bold">*</span>
+            Telephone / WhatsApp Number <span className="text-[#EF4444] font-bold">*</span>
           </label>
           <input
             type="tel"
@@ -369,7 +369,7 @@ export default function QuoteForm({ initialMachine, onSuccess, className = "" }:
         {/* Country / Location */}
         <div>
           <label htmlFor="countryLocation" className="block text-xs font-medium text-white mb-1.5">
-            Delivery Country &amp; City <span className="text-[#C82032] font-bold">*</span>
+            Delivery Country &amp; City <span className="text-[#EF4444] font-bold">*</span>
           </label>
           <input
             type="text"
@@ -386,7 +386,7 @@ export default function QuoteForm({ initialMachine, onSuccess, className = "" }:
         {/* Machine of Interest */}
         <div>
           <label htmlFor="machineInterest" className="block text-xs font-medium text-white mb-1.5">
-            Machine Model of Interest <span className="text-[#C82032] font-bold">*</span>
+            Machine Model of Interest <span className="text-[#EF4444] font-bold">*</span>
           </label>
           <select
             id="machineInterest"
