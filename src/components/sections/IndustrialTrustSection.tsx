@@ -78,7 +78,7 @@ export default function IndustrialTrustSection({
       {/* 1. Manufacturing Tooling & Plant Standards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-[#151719] border border-white/10 p-6 rounded-2xl space-y-3 shadow-md">
-          <div className="w-10 h-10 rounded-xl bg-[#EF4444] flex items-center justify-center text-white font-mono font-bold text-sm shadow">
+          <div className="w-10 h-10 rounded-xl bg-[#101112] border border-white/20 flex items-center justify-center text-white font-mono font-bold text-sm">
             01
           </div>
           <h3 className="font-display text-xl font-semibold uppercase text-white tracking-wide">
@@ -93,7 +93,7 @@ export default function IndustrialTrustSection({
         </div>
 
         <div className="bg-[#151719] border border-white/10 p-6 rounded-2xl space-y-3 shadow-md">
-          <div className="w-10 h-10 rounded-xl bg-[#EF4444] flex items-center justify-center text-white font-mono font-bold text-sm shadow">
+          <div className="w-10 h-10 rounded-xl bg-[#101112] border border-white/20 flex items-center justify-center text-white font-mono font-bold text-sm">
             02
           </div>
           <h3 className="font-display text-xl font-semibold uppercase text-white tracking-wide">
@@ -108,7 +108,7 @@ export default function IndustrialTrustSection({
         </div>
 
         <div className="bg-[#151719] border border-white/10 p-6 rounded-2xl space-y-3 shadow-md">
-          <div className="w-10 h-10 rounded-xl bg-[#EF4444] flex items-center justify-center text-white font-mono font-bold text-sm shadow">
+          <div className="w-10 h-10 rounded-xl bg-[#101112] border border-white/20 flex items-center justify-center text-white font-mono font-bold text-sm">
             03
           </div>
           <h3 className="font-display text-xl font-semibold uppercase text-white tracking-wide">

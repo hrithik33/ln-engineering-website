@@ -50,6 +50,8 @@ next-env.d.ts
 public/documents/ln-engineering-catalogue.pdf
 
 # lighthouse and performance audit artifacts
-*-mobile.json
-*-desktop.json
+*-mobile*.json
+*-desktop*.json
 lighthouse-*.json
+baseline-*.json
+final-*.json
