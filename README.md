@@ -47,7 +47,7 @@ This repository contains the complete, production-ready website for **LN Enginee
 | **`/products/wire-rope`** | **Diamond Wire Rope:** 35 beads/meter, 11.5 mm diameter, imported high-tensile core wire, application compatibility, and technical integrity notes. |
 | **`/about`** | **About Us:** Corporate profile, Mr. L.N. Jangid leadership, 1993-present development timeline, ZED Bronze & Silver credentials, RFC Gold Borrower award, MSME Best Stone Technology Award, and national/global installation directory (20+ Indian hubs, Egypt, Azerbaijan, Nepal). |
 | **`/engineering`** | **Engineering & Tooling:** In-house machine shop tooling (HMT Lathes, Sweden-made Boring, Heavy Duty Planer, Radial Drill, Paint Shop), assembly processes, and Accuracy Master quality inspection. |
-| **`/resources`** | **Downloads & Knowledge Base:** Direct downloads of the 225 MB Master Catalogue and 62 MB Verona International Catalogue, alongside technical engineering FAQs. |
+| **`/resources`** | **Downloads & Knowledge Base:** Direct downloads of the Master Catalogue and 41 MB Product Catalogue, alongside technical engineering FAQs. |
 | **`/contact`** | **Contact & Quotation:** Full pre-fillable quotation form with stone type and production requirements, direct click-to-call links, verified WhatsApp integration, Rajsamand Head Office address, and South India sales offices (Ongole & Martur). |
 | **`/sitemap.xml`** | **Dynamic XML Sitemap:** Generated for search engine indexing. |
 | **`/robots.txt`** | **Robots Directives:** Configured for crawler discovery and API privacy. |
@@ -59,8 +59,8 @@ This repository contains the complete, production-ready website for **LN Enginee
 ```
 public/
 ├── documents/
-│   ├── ln-engineering-catalogue.pdf   (236 MB official master catalogue)
-│   └── ln-verona-catalogue.pdf        (65 MB Verona international edition)
+│   ├── ln-engineering-catalogue-optimized.pdf (3.8 MB official master catalogue)
+│   └── product-catalogue.pdf                  (41 MB official product catalogue)
 └── images/
     ├── brand/
     │   ├── logo.png                   (Official red monogram & wordmark)
@@ -83,7 +83,7 @@ public/
 
 ## 5. Technical Product Data & Discrepancy Transparency
 
-In adherence to industrial credibility guidelines, all specifications are derived strictly from primary catalogues (`ln.pdf` and `LN Verona.pdf`). Unresolved items are preserved transparently:
+In adherence to industrial credibility guidelines, all specifications are derived strictly from primary catalogues (`ln.pdf` and official Product Catalogue). Unresolved items are preserved transparently:
 
 1. **Mono Wire Machine Count:** Documented as `120+ Machines Running Successfully` per `ln.pdf` page 7 (with advisory noting `200+` cited in secondary materials).
 2. **Foundation Year:** Milestone timeline begins in **1993**, while marketing marks state **Since 1994**. Both dates are clearly documented on `/about`.

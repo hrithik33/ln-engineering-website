@@ -18,7 +18,7 @@ async function get(urlPath) {
 
 async function runAudit() {
   console.log("================================================================================");
-  console.log("LN ENGINEERING — VERONA CATALOGUE CLEANUP VERIFICATION AUDIT");
+  console.log("LN ENGINEERING — PRODUCT CATALOGUE VERIFICATION AUDIT");
   console.log("================================================================================");
 
   // 1. Check live public routes
@@ -69,7 +69,7 @@ async function runAudit() {
 
   console.log(`  Hero with Red Machine Visuals:      ${hasHero ? "✓ PASS" : "✗ FAIL"}`);
   console.log(`  Concise Introduction:               ${hasIntro ? "✓ PASS" : "✗ FAIL"}`);
-  console.log(`  Verona-Only Product Showcase:       ${hasShowcase ? "✓ PASS" : "✗ FAIL"}`);
+  console.log(`  Product Catalogue Showcase:         ${hasShowcase ? "✓ PASS" : "✗ FAIL"}`);
   console.log(`  Verified Technical Highlights:      ${hasHighlights ? "✓ PASS" : "✗ FAIL"}`);
   console.log(`  Factory Location & Google Map:      ${hasMap ? "✓ PASS" : "✗ FAIL"}`);
   console.log(`  Working Directions Link:            ${hasDirections ? "✓ PASS" : "✗ FAIL"}`);
@@ -89,7 +89,7 @@ async function runAudit() {
   // 5. Test Quotation API delivery
   console.log("\n[5] TESTING ENQUIRY SUBMISSION ENDPOINT:");
   const payload = JSON.stringify({
-    name: "Verona Audit Test",
+    name: "Product Catalogue Audit Test",
     companyName: "Audit Stone Corp",
     email: "audit@test.com",
     phone: "+919876543210",
@@ -97,7 +97,7 @@ async function runAudit() {
     machineInterest: "LN 2500 PROMAXX",
     stoneType: "Granite",
     productionRequirement: "Squaring 30 blocks/day",
-    message: "Verona PDF verification enquiry.",
+    message: "Product Catalogue PDF verification enquiry.",
     _formLoadedAt: Date.now() - 5000,
   });
 

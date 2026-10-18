@@ -1,6 +1,6 @@
 // ============================================================================
 // LN Engineering — Company Data (Central Source of Truth)
-// Verified from Official Catalogues (ln.pdf, LN Verona.pdf)
+// Verified from Official Catalogues (ln.pdf & Product Catalogue)
 // ============================================================================
 
 export const company = {

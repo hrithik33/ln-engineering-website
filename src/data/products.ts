@@ -1,6 +1,6 @@
 // ============================================================================
 // LN Engineering — Products Data (Central Source of Truth)
-// Verified 1:1 against Official Catalogue (ln.pdf & LN Verona.pdf)
+// Verified 1:1 against Official Catalogue (ln.pdf & Product Catalogue)
 // ============================================================================
 
 export interface SpecificationItem {

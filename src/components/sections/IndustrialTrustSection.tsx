@@ -185,15 +185,15 @@ export default function IndustrialTrustSection({
 
             <div className="lg:col-span-5 flex flex-col sm:flex-row gap-3 justify-end">
               <a
-                href="/documents/ln-verona-catalogue-optimized.pdf"
-                download="LN_Engineering_Verona_Catalogue.pdf"
+                href="/documents/product-catalogue.pdf"
+                download="LN_Engineering_Product_Catalogue.pdf"
                 className="min-h-[44px] px-5 py-3 bg-[#C82032] hover:bg-[#D92639] text-white rounded-xl text-xs font-semibold uppercase tracking-wider transition-colors inline-flex items-center justify-center gap-2.5 shadow-lg shadow-[#C82032]/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C82032]"
-                aria-label="Download Official Verona International Catalogue PDF (41 MB)"
+                aria-label="Download Official Product Catalogue PDF (41 MB)"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5h-2v1.5h2c.55 0 1-.45 1-1s-.45-.5-1-.5zm0-3h-2v1.5h2c.55 0 1-.45 1-1s-.45-.5-1-.5zm5 4.5h-1.5v-4h1.5c.83 0 1.5.67 1.5 1.5v1c0 .83-.67 1.5-1.5 1.5zm4.5-2.5h-1.5v1h1.5v1.5h-1.5V14h-1.5V8.5h3v1.5z"/>
                 </svg>
-                <span>Verona Catalogue (41 MB)</span>
+                <span>Product Catalogue (41 MB)</span>
               </a>
 
               <a

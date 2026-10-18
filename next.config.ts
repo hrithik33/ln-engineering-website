@@ -72,6 +72,16 @@ const nextConfig: NextConfig = {
         destination: "/contact",
         permanent: true,
       },
+      {
+        source: "/documents/ln-verona-catalogue-optimized.pdf",
+        destination: "/documents/product-catalogue.pdf",
+        permanent: true,
+      },
+      {
+        source: "/documents/ln-verona-catalogue.pdf",
+        destination: "/documents/product-catalogue.pdf",
+        permanent: true,
+      },
     ];
   },
 };

@@ -211,13 +211,13 @@ export default function Footer() {
                 </Link>
               </li>
 
-              {/* Compact Verona Catalogue Download Link with PDF Icon */}
+              {/* Compact Product Catalogue Download Link with PDF Icon */}
               <li className="pt-2">
                 <a
-                  href="/documents/ln-verona-catalogue-optimized.pdf"
-                  download="LN_Engineering_Verona_Catalogue.pdf"
+                  href="/documents/product-catalogue.pdf"
+                  download="LN_Engineering_Product_Catalogue.pdf"
                   className="inline-flex items-center gap-2.5 px-3 py-2 rounded-lg bg-[#141618] border border-white/10 hover:border-[#C82032]/60 hover:bg-[#181A1C] text-xs text-zinc-300 hover:text-white transition-all group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C82032]"
-                  aria-label="Download Official Verona Catalogue PDF (41 MB)"
+                  aria-label="Download Official Product Catalogue PDF (41 MB)"
                 >
                   <svg 
                     className="w-4 h-4 text-[#C82032] shrink-0" 
@@ -229,10 +229,10 @@ export default function Footer() {
                   </svg>
                   <div>
                     <span className="block font-medium text-white group-hover:text-[#C82032] transition-colors leading-none">
-                      Verona Catalogue PDF
+                      Product Catalogue
                     </span>
                     <span className="block text-[10px] text-[#7E8691] font-mono mt-0.5">
-                      International Edition • 41 MB
+                      Stone Machinery • 41 MB PDF
                     </span>
                   </div>
                 </a>
