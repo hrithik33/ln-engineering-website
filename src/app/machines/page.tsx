@@ -8,14 +8,49 @@ import ProductCard from "@/components/ui/ProductCard";
 import EnquiryBanner from "@/components/sections/EnquiryBanner";
 
 export const metadata: Metadata = {
-  title: "Stone Processing Machinery Catalog — Mono Wire, Multiwire & CNC Wire Saws",
+  title: "Stone Processing Machinery Catalog — Mono Wire, Multiwire & CNC Wire Saws | LN Engineering",
   description:
     "Explore LN Engineering's comprehensive range of stone processing machinery: Mono Wire Saws (LN 2500, PRO, PROMAXX), Multiwire Gangsaws (6 to 22 wires), and CNC Wire Profile Machines.",
+  alternates: {
+    canonical: "https://www.gangsawmachines.com/machines",
+  },
+  openGraph: {
+    title: "Stone Processing Machinery Catalog — Mono Wire, Multiwire & CNC Wire Saws",
+    description:
+      "Explore LN Engineering's full range of stone processing machinery: Mono Wire Saws, Multiwire Gangsaws, and CNC Wire Profile Centers.",
+    url: "https://www.gangsawmachines.com/machines",
+    siteName: "LN Engineering",
+    images: ["/images/machines/ln-stone-cutting-gantry.jpg"],
+    locale: "en_IN",
+    type: "website",
+  },
 };
 
 export default function MachinesOverviewPage() {
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "LN Engineering Stone Processing Machinery Catalog",
+    url: "https://www.gangsawmachines.com/machines",
+    description: "Industrial diamond wire saws, multiwire gangsaws, and CNC profiling centers.",
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: productCategories.map((cat, idx) => ({
+        "@type": "ListItem",
+        position: idx + 1,
+        url: `https://www.gangsawmachines.com/machines/${cat.slug}`,
+        name: cat.name,
+      })),
+    },
+  };
+
   return (
     <div className="pt-32 sm:pt-40 pb-20 space-y-16 min-h-screen bg-[#101112]">
+      {/* CollectionPage Schema JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+      />
       {/* Header Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-4">
         <Breadcrumbs items={[{ label: "Machines Catalog" }]} />

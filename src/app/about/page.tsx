@@ -4,12 +4,26 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { company, timeline, verifiedCredentials, geographicalPresence, companyDiscrepancies } from "@/data/company";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
+import IndustrialTrustSection from "@/components/sections/IndustrialTrustSection";
 import EnquiryBanner from "@/components/sections/EnquiryBanner";
 
 export const metadata: Metadata = {
-  title: "About Us — History, Manufacturing Plant & Global Presence",
+  title: "About Us — History, Manufacturing Plant & Global Presence | LN Engineering",
   description:
-    "Learn about LN Engineering (L N Machineries Pvt. Ltd.): Founded in Rajsamand, Rajasthan. 30+ years of precision stone machinery development, verified ZED certifications, and global footprint.",
+    "Learn about LN Engineering (L N Machineries Pvt. Ltd.): Founded in Rajsamand, Rajasthan. 30+ years of precision stone machinery development, verified ZED certifications, and global footprint across India, Egypt, Azerbaijan, and Nepal.",
+  alternates: {
+    canonical: "https://www.gangsawmachines.com/about",
+  },
+  openGraph: {
+    title: "About Us — History, Manufacturing Plant & Global Presence | LN Engineering",
+    description:
+      "30+ years of precision stone machinery manufacturing, verified ZED certifications, and global export reach.",
+    url: "https://www.gangsawmachines.com/about",
+    siteName: "LN Engineering",
+    images: ["/images/factory/plant-workforce.jpg"],
+    locale: "en_IN",
+    type: "website",
+  },
 };
 
 export default function AboutPage() {
@@ -254,6 +268,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Verified Plant Capabilities & Installations Gallery */}
+      <IndustrialTrustSection showCatalogueDownloads={false} />
 
       {/* Global Enquiry Banner */}
       <EnquiryBanner

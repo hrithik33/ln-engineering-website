@@ -1,10 +1,38 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from "next";
 import { company } from "@/data/company";
 import { productCategories } from "@/data/products";
+import IndustrialTrustSection from "@/components/sections/IndustrialTrustSection";
 import GlobalWorldMap from "@/components/sections/GlobalWorldMap";
 import EnquiryBanner from "@/components/sections/EnquiryBanner";
+
+export const metadata: Metadata = {
+  title: "LN Engineering — Precision Stone Engineering & Wire Saw Machinery",
+  description:
+    "Official website of LN Engineering (L N Machineries Pvt. Ltd.): Premier Indian manufacturer of 5th Generation Mono Wire Saws, Multiwire Gangsaws (6 to 22 wire), CNC Wire Profile Centers, and Diamond Wire Rope. Rajsamand, Rajasthan.",
+  alternates: {
+    canonical: "https://www.gangsawmachines.com",
+  },
+  openGraph: {
+    title: "LN Engineering — Precision Stone Engineering & Wire Saw Machinery",
+    description:
+      "Premier Indian manufacturer of Mono Wire Saws, Multiwire Gangsaws (6 to 22 wire), and CNC Wire Profile equipment.",
+    url: "https://www.gangsawmachines.com",
+    siteName: "LN Engineering",
+    images: [
+      {
+        url: "/images/hero/industrial-stone-cutting-spray.jpg",
+        width: 1200,
+        height: 630,
+        alt: "LN Engineering Heavy Industrial Wire Saw Machinery Under High-Pressure Water Spray",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+};
 
 export default function HomePage() {
   // Verified technical highlights strictly documented in Verona catalogue
@@ -343,7 +371,12 @@ export default function HomePage() {
       </section>
 
       {/* =====================================================================
-          5. INTERNATIONAL REACH & GLOBAL WORLD MAP SECTION
+          5. VERIFIED PLANT CAPABILITIES & INSTALLATIONS GALLERY
+          ===================================================================== */}
+      <IndustrialTrustSection />
+
+      {/* =====================================================================
+          6. INTERNATIONAL REACH & GLOBAL WORLD MAP SECTION
           ===================================================================== */}
       <GlobalWorldMap />
 

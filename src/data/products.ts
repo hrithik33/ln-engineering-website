@@ -27,6 +27,7 @@ export interface ProductModel {
   categoryName: string;
   image: string;
   galleryImages: string[];
+  applications: string[];
   keyHighlights: string[];
   specs: SpecificationItem[];
   thickSlabConfigs?: ThickSlabConfig[];
@@ -63,7 +64,14 @@ export const monoWireModels: ProductModel[] = [
     image: "/images/machines/ln-stone-cutting-gantry.jpg",
     galleryImages: [
       "/images/machines/ln-stone-cutting-gantry.jpg",
-      "/images/machines/ln-promaxx-2500-field.jpg",
+      "/images/hero/industrial-stone-cutting-spray.jpg",
+      "/images/factory/plant-lathe.jpg",
+    ],
+    applications: [
+      "Raw Quarry Block Squaring & Dressing",
+      "360° Revolving Turntable Multi-Face Dressing",
+      "Splitting Irregular Natural Stone & Granite Blocks",
+      "Dimension Stone Block Preparation for Gangsaws",
     ],
     keyHighlights: [
       "2500 mm Precision Flywheels (Dual configuration)",
@@ -107,7 +115,14 @@ export const monoWireModels: ProductModel[] = [
     image: "/images/machines/ln-gantry-cutting-field.jpg",
     galleryImages: [
       "/images/machines/ln-gantry-cutting-field.jpg",
-      "/images/machines/ln-stone-cutting-gantry.jpg",
+      "/images/machines/ln-promaxx-2500-field.jpg",
+      "/images/factory/plant-workforce.jpg",
+    ],
+    applications: [
+      "Dual-Purpose Block Squaring & Commercial Slicing",
+      "High-Accuracy Marble & Sandstone Slab Cutting",
+      "Variable Dual-RPM Feed Processing for Varied Hardness Stones",
+      "Semi-Automated Continuous Block Dressing",
     ],
     keyHighlights: [
       "7-Inch Digital Touchscreen PLC Controller",
@@ -152,7 +167,14 @@ export const monoWireModels: ProductModel[] = [
     image: "/images/machines/ln-promaxx-2500-field.jpg",
     galleryImages: [
       "/images/machines/ln-promaxx-2500-field.jpg",
+      "/images/hero/industrial-stone-cutting-spray.jpg",
       "/images/machines/ln-gantry-cutting-field.jpg",
+    ],
+    applications: [
+      "Heavy Abrasive Granite Block Dressing",
+      "Remote Telemetry Monitored Quarry Plants",
+      "Automated Slicing with Telescopic Pillar Protection",
+      "High-Volume Commercial Stone Fabrication Hubs",
     ],
     keyHighlights: [
       "Built-in IoT Telemetry (Live Data Display on Mobile)",
@@ -204,6 +226,13 @@ export const multiwireModels: ProductModel[] = [
     galleryImages: [
       "/images/machines/ln-gantry-cutting-field.jpg",
       "/images/machines/ln-stone-cutting-gantry.jpg",
+      "/images/factory/exhibition-verona.jpg",
+    ],
+    applications: [
+      "Heavy Thick Slab Slicing (50 mm to 100 mm)",
+      "Monument & Memorial Base Manufacturing",
+      "Architectural Stone Kerbstones & Pavers",
+      "High-Yield Slicing of Hard Granite Blocks",
     ],
     keyHighlights: [
       "Thick Slab Processing from 50 mm to 100 mm",
@@ -248,7 +277,14 @@ export const multiwireModels: ProductModel[] = [
     image: "/images/machines/ln-promaxx-2500-field.jpg",
     galleryImages: [
       "/images/machines/ln-promaxx-2500-field.jpg",
-      "/images/machines/ln-stone-cutting-gantry.jpg",
+      "/images/hero/industrial-stone-cutting-spray.jpg",
+      "/images/factory/event-p14-img1.jpg",
+    ],
+    applications: [
+      "High-Volume Commercial Slab Production (20 mm / 30 mm)",
+      "Thick Slab Pitch Cutting (50 mm to 100 mm)",
+      "Blade Gangsaw Alternative with Reduced Slurry & Kerf",
+      "Automated Multi-Slab Downward Cutting on Granite",
     ],
     keyHighlights: [
       "12 Diamond Wire High-Output Parallel Cutting",
@@ -299,6 +335,13 @@ export const multiwireModels: ProductModel[] = [
     galleryImages: [
       "/images/machines/ln-stone-cutting-gantry.jpg",
       "/images/machines/ln-promaxx-2500-field.jpg",
+      "/images/hero/industrial-stone-cutting-spray.jpg",
+    ],
+    applications: [
+      "Flagship High-Volume Commercial Gangsaw Replacement",
+      "21-Slab Single Pass High-Speed Granite Processing",
+      "Export-Quality Parallel Slab Production",
+      "Industrial Automated Stone Slicing Plants",
     ],
     keyHighlights: [
       "22 Simultaneous Diamond Wire Cutting Lines",
@@ -348,6 +391,13 @@ export const cncWireModels: ProductModel[] = [
     galleryImages: [
       "/images/machines/ln-stone-cutting-gantry.jpg",
       "/images/machines/ln-gantry-cutting-field.jpg",
+      "/images/factory/plant-lathe.jpg",
+    ],
+    applications: [
+      "Horizontal Block Layer Slicing Without Repositioning",
+      "Curved Architectural Arches up to 20 Ft Radius",
+      "Bridge & Monument Arc Profiling",
+      "Dual-Orientation (Horizontal & Vertical) Profiling",
     ],
     keyHighlights: [
       "Horizontal & Vertical Arc and Design Cutting",
@@ -384,6 +434,13 @@ export const cncWireModels: ProductModel[] = [
     galleryImages: [
       "/images/machines/ln-gantry-cutting-field.jpg",
       "/images/machines/ln-promaxx-2500-field.jpg",
+      "/images/factory/exhibition-stonemart.jpg",
+    ],
+    applications: [
+      "2D & 3D Architectural CNC Stone Profiling",
+      "Fluted Columns, Balustrades & Capital Carvings",
+      "Ornate Cornices, Tapered Profiles & Cornice Mouldings",
+      "CAD/CAM DXF Toolpath Interpolation on Granite & Marble",
     ],
     keyHighlights: [
       "Genuine Siemens CNC Controller",
@@ -425,6 +482,13 @@ export const wireRopeProduct: ProductModel = {
   galleryImages: [
     "/images/products/wire-rope/diamond-wire-rope.jpg",
     "/images/products/wire-rope/hero.jpg",
+    "/images/hero/industrial-stone-cutting-spray.jpg",
+  ],
+  applications: [
+    "High-Speed Primary Quarry Block Extraction",
+    "Multiwire Gangsaw Commercial Slab Slicing",
+    "Stationary Mono Wire Block Dressing & Squaring",
+    "CNC Wire Profiling & Contour Carving on Hard Granites",
   ],
   keyHighlights: [
     "35 Precision Diamond Beads per Meter",

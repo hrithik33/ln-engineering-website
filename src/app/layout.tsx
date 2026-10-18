@@ -110,6 +110,7 @@ export default function RootLayout({
   const orgStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://www.gangsawmachines.com/#organization",
     name: company.name,
     legalName: company.legalName,
     url: "https://www.gangsawmachines.com",
@@ -146,6 +147,19 @@ export default function RootLayout({
     sameAs: [company.social.facebook, company.social.twitter],
   };
 
+  const websiteStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.gangsawmachines.com/#website",
+    url: "https://www.gangsawmachines.com",
+    name: "LN Engineering",
+    description: "Precision Stone Engineering & Wire Saw Machinery",
+    publisher: {
+      "@id": "https://www.gangsawmachines.com/#organization",
+    },
+    inLanguage: "en-IN",
+  };
+
   return (
     <html
       lang="en"
@@ -155,6 +169,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgStructuredData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteStructuredData) }}
         />
       </head>
       <body className="bg-[#101112] text-[#F5F5F5] antialiased min-h-screen flex flex-col font-sans selection:bg-[#C82032] selection:text-white">

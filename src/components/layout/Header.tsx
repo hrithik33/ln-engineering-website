@@ -185,7 +185,7 @@ export default function Header() {
           <div className="flex lg:hidden items-center space-x-2">
             <Link
               href="/contact"
-              className="px-3 py-1.5 font-sans text-xs font-semibold uppercase tracking-wider text-white bg-[#C82032] rounded-lg"
+              className="min-h-[44px] px-3.5 py-2 font-sans text-xs font-semibold uppercase tracking-wider text-white bg-[#C82032] rounded-xl flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
               Quote
             </Link>
@@ -193,16 +193,16 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-[#F5F5F5] hover:text-white bg-white/5 hover:bg-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C82032]"
+              className="min-h-[44px] min-w-[44px] p-2.5 text-[#F5F5F5] hover:text-white bg-white/5 hover:bg-white/10 rounded-xl flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-[#C82032]"
               aria-label="Toggle navigation menu"
               aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? (
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               ) : (
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               )}
@@ -217,7 +217,7 @@ export default function Header() {
               <div key={item.label} className="border-b border-white/5 pb-2">
                 <Link
                   href={item.href}
-                  className="block font-sans text-sm uppercase font-semibold text-white py-1.5"
+                  className="min-h-[44px] flex items-center font-sans text-sm uppercase font-semibold text-white px-2 py-1.5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C82032] rounded"
                 >
                   {item.label}
                 </Link>
@@ -227,7 +227,7 @@ export default function Header() {
                       <Link
                         key={sub.label}
                         href={sub.href}
-                        className="block text-xs font-sans text-[#A7ADB5] hover:text-white py-1"
+                        className="min-h-[40px] flex items-center text-xs font-sans text-[#A7ADB5] hover:text-white px-2 py-1 rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C82032]"
                       >
                         {sub.label}
                       </Link>
@@ -240,13 +240,13 @@ export default function Header() {
             <div className="pt-2 flex flex-col gap-2">
               <Link
                 href="/contact"
-                className="w-full text-center py-2.5 font-sans text-xs font-semibold uppercase tracking-wider text-white bg-[#C82032] rounded-xl"
+                className="w-full min-h-[44px] flex items-center justify-center text-center py-2.5 font-sans text-xs font-semibold uppercase tracking-wider text-white bg-[#C82032] rounded-xl shadow-md"
               >
                 Request a Detailed Quotation
               </Link>
               <a
                 href={`tel:${company.phones[0].number}`}
-                className="w-full text-center py-2 text-xs font-mono text-[#F5F5F5] bg-white/5 rounded-xl"
+                className="w-full min-h-[44px] flex items-center justify-center text-center py-2 text-xs font-mono text-[#F5F5F5] bg-white/5 rounded-xl border border-white/10"
               >
                 Direct Sales: {company.phones[0].display}
               </a>

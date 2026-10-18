@@ -7,7 +7,20 @@ import QuoteForm from "@/components/forms/QuoteForm";
 export const metadata: Metadata = {
   title: "Contact & Request a Quotation — LN Engineering Works",
   description:
-    "Direct contact details for LN Engineering (L N Machineries Pvt. Ltd.): Head office in Rajsamand, Rajasthan, and South India sales offices in Ongole and Martur, Andhra Pradesh.",
+    "Direct contact details and quotation request for LN Engineering (L N Machineries Pvt. Ltd.): Head office and manufacturing plant in Rajsamand, Rajasthan, and South India sales offices in Ongole and Martur, Andhra Pradesh.",
+  alternates: {
+    canonical: "https://www.gangsawmachines.com/contact",
+  },
+  openGraph: {
+    title: "Contact & Request a Quotation — LN Engineering Works",
+    description:
+      "Direct technical and commercial sales contact for LN Engineering stone processing machinery.",
+    url: "https://www.gangsawmachines.com/contact",
+    siteName: "LN Engineering",
+    images: ["/images/hero/industrial-stone-cutting-spray.jpg"],
+    locale: "en_IN",
+    type: "website",
+  },
 };
 
 interface ContactPageProps {
@@ -20,8 +33,36 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
   const resolvedSearchParams = await searchParams;
   const initialMachine = resolvedSearchParams?.machine || "";
 
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "LN Engineering Contact & Quotation Desk",
+    url: "https://www.gangsawmachines.com/contact",
+    description: "Request technical proposals and connect with LN Engineering machinery planners.",
+    mainEntity: {
+      "@type": "LocalBusiness",
+      name: company.legalName,
+      alternateName: company.name,
+      telephone: company.phones[0].number,
+      email: company.emails[0].address,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: company.address.street,
+        addressLocality: company.address.city,
+        addressRegion: company.address.state,
+        postalCode: company.address.pincode,
+        addressCountry: "IN",
+      },
+    },
+  };
+
   return (
     <div className="pt-32 sm:pt-40 pb-20 space-y-16 min-h-screen bg-[#101112]">
+      {/* ContactPage Schema JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+      />
       {/* Top Breadcrumb & Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-4">
         <Breadcrumbs items={[{ label: "Contact & Quotations" }]} />
