@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "5th Generation Mono Wire Saw Machines engineered with 2500 mm flywheels and 50-tonne revolving block turntables.",
     url: "https://www.gangsawmachines.com/machines/mono-wire-saw",
     siteName: "LN Engineering",
-    images: ["/images/machines/ln-stone-cutting-gantry.jpg"],
+    images: ["/images/machines/mono-wire-saw/mono-p6-img0.webp"],
     locale: "en_IN",
     type: "website",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mono Wire Saw Machines — LN Engineering",
     description: "Industrial stone dressing and slicing mono wire saws with 2500mm flywheels.",
-    images: ["/images/machines/ln-stone-cutting-gantry.jpg"],
+    images: ["/images/machines/mono-wire-saw/mono-p6-img0.webp"],
   },
 };
 

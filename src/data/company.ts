@@ -82,11 +82,13 @@ export const company = {
       name: "Mrs. Rekha Jangid",
       role: "Executive Administration & Operations",
       qualification: "B.Sc & MBA (Software Graduate)",
+      bio: "Directs plant administrative operations, ERP systems, human resources, and digital software coordination at the Rajsamand works.",
     },
     {
       name: "Mrs. Sarita Jangid",
       role: "Finance & Corporate Governance",
       qualification: "B.Sc & MBA",
+      bio: "Directs financial planning, statutory compliance, corporate governance, banking relations, and commercial accounting.",
     },
   ],
 
@@ -108,7 +110,7 @@ export const company = {
     state: "Rajasthan",
     country: "India",
     pincode: "313326",
-    full: "N. H. 8, Mokhampura, Rajsamand (Udaipur), Rajsamand, India 313326",
+    full: "N. H. 8, Mokhampura, Rajsamand (Udaipur), Rajasthan - 313326, India",
     mapUrl: "https://maps.google.com/?q=Mokhampura+Rajsamand+Rajasthan+313326",
   },
 

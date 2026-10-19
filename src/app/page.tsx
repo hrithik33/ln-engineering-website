@@ -254,6 +254,11 @@ export default function HomePage() {
                 <span className="text-white font-semibold block text-xs uppercase">Export Reach</span>
                 <span className="text-[#A7ADB5] text-[11px] block">India • Egypt • Azerbaijan • Nepal</span>
               </div>
+
+              {/* Documentary Evidence & Citation Notice */}
+              <div className="sm:col-span-2 pt-2 border-t border-white/10 text-[10px] text-[#8E959F] font-mono leading-relaxed">
+                <span className="text-[#EF4444] font-semibold uppercase">Verified Evidence:</span> 120+ fleet documented in Official Catalogue Page 7 (&ldquo;120+ Machines Running Successfully&rdquo; in mono wire category; 500+ lifetime machines commissioned since 1993). ZED Gold certification proclaimed on Master Catalogue Cover; ISO 9001:2015 quality standard certified. Physical certificates available upon request at Rajsamand works.
+              </div>
             </div>
           </div>
         </div>

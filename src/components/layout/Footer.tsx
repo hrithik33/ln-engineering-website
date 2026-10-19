@@ -214,13 +214,13 @@ export default function Footer() {
                 </Link>
               </li>
 
-              {/* Compact Product Catalogue Download Link with PDF Icon */}
-              <li className="pt-2">
+              {/* Compact Product Catalogue Download Links with PDF Icon */}
+              <li className="pt-2 space-y-1.5">
                 <a
-                  href="/documents/product-catalogue.pdf"
-                  download="LN_Engineering_Product_Catalogue.pdf"
-                  className="inline-flex items-center gap-2.5 px-3 py-2 rounded-lg bg-[#141618] border border-white/10 hover:border-[#EF4444]/60 hover:bg-[#181A1C] text-xs text-zinc-300 hover:text-white transition-all group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#EF4444]"
-                  aria-label="Product Catalogue (Stone Machinery 41 MB PDF)"
+                  href="/documents/ln-engineering-catalogue-optimized.pdf"
+                  download="LN_Engineering_Master_Catalogue.pdf"
+                  className="inline-flex items-center gap-2.5 px-3 py-2 rounded-lg bg-[#141618] border border-white/10 hover:border-[#EF4444]/60 hover:bg-[#181A1C] text-xs text-zinc-300 hover:text-white transition-all group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#EF4444] w-full"
+                  aria-label="Master Catalogue (Lightweight 3.8 MB PDF)"
                 >
                   <svg 
                     className="w-4 h-4 text-[#EF4444] shrink-0" 
@@ -232,12 +232,21 @@ export default function Footer() {
                   </svg>
                   <div>
                     <span className="block font-medium text-white group-hover:text-[#EF4444] transition-colors leading-none">
-                      Product Catalogue
+                      Master Catalogue
                     </span>
                     <span className="block text-[10px] text-[#9CA3AF] font-mono mt-0.5">
-                      Stone Machinery • 41 MB PDF
+                      Fast Web Edition • 3.8 MB PDF
                     </span>
                   </div>
+                </a>
+
+                <a
+                  href="/documents/product-catalogue.pdf"
+                  download="LN_Engineering_Product_Catalogue.pdf"
+                  className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-lg bg-[#0C0D0F] border border-white/5 hover:border-white/20 text-[11px] text-[#9CA3AF] hover:text-white transition-all group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white w-full"
+                  aria-label="Product Catalogue (Print Edition 41 MB PDF)"
+                >
+                  <span className="text-[10px] font-mono">Print Edition • 41 MB PDF &rarr;</span>
                 </a>
               </li>
             </ul>

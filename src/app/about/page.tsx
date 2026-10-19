@@ -83,7 +83,7 @@ export default function AboutPage() {
               {/* Bottom Overlay Action Button */}
               <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between gap-4">
                 <Link
-                  href="/products"
+                  href="/machines"
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-black/80 hover:bg-black text-white text-xs font-mono uppercase tracking-wider border border-white/25 rounded-none backdrop-blur-md transition-colors"
                 >
                   <span>Explore Machinery</span>
@@ -299,7 +299,7 @@ export default function AboutPage() {
                   {mgmt.role}
                 </p>
                 <p className="text-[11px] text-[#9CA3AF] leading-relaxed">
-                  Directing executive administrative workflows, statutory compliance, corporate finance, and commercial software coordination across the Rajsamand plant.
+                  {mgmt.bio}
                 </p>
               </div>
             ))}

@@ -2,6 +2,7 @@ import React from "react";
 import { Metadata } from "next";
 import { wireRopeProduct } from "@/data/products";
 import CleanMachineDetail from "@/components/ui/CleanMachineDetail";
+import WireRopeMatrix from "@/components/ui/WireRopeMatrix";
 
 export const metadata: Metadata = {
   title: "Diamond Wire Rope — 35 Beads/M, 11.5mm Core Wire | LN Engineering",
@@ -30,11 +31,14 @@ export const metadata: Metadata = {
 
 export default function WireRopePage() {
   return (
-    <CleanMachineDetail
-      categorySlug="wire-rope"
-      categoryName="Tooling & Consumables"
-      models={[wireRopeProduct]}
-      defaultModelSlug="diamond-wire-rope"
-    />
+    <>
+      <CleanMachineDetail
+        categorySlug="wire-rope"
+        categoryName="Tooling & Consumables"
+        models={[wireRopeProduct]}
+        defaultModelSlug="diamond-wire-rope"
+      />
+      <WireRopeMatrix />
+    </>
   );
 }

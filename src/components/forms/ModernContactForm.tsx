@@ -15,7 +15,10 @@ export default function ModernContactForm({ initialMachine, className = "" }: Mo
     email: "",
     phone: "",
     enquiryType: initialMachine ? "Machinery quotation" : "Product enquiry",
-    message: initialMachine ? `I would like to request technical specifications, commercial pricing, and delivery timeline for the ${initialMachine}.` : "",
+    machineInterest: initialMachine || "",
+    message: initialMachine
+      ? `I would like to request technical specifications, commercial pricing, and delivery timeline for the ${initialMachine}.`
+      : "",
     botField: "", // Anti-spam honeypot
   });
 
@@ -29,10 +32,40 @@ export default function ModernContactForm({ initialMachine, className = "" }: Mo
     setFormLoadedAt(Date.now());
   }, []);
 
+  // Update formData if initialMachine changes dynamically
+  useEffect(() => {
+    if (initialMachine) {
+      setFormData((prev) => ({
+        ...prev,
+        machineInterest: initialMachine,
+        enquiryType: "Machinery quotation",
+        message:
+          !prev.message || prev.message.startsWith("I would like to request technical specifications")
+            ? `I would like to request technical specifications, commercial pricing, and delivery timeline for the ${initialMachine}.`
+            : prev.message,
+      }));
+    }
+  }, [initialMachine]);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleMachineChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const val = e.target.value;
+    setFormData((prev) => ({
+      ...prev,
+      machineInterest: val,
+      enquiryType: val ? "Machinery quotation" : prev.enquiryType,
+      message:
+        !prev.message || prev.message.startsWith("I would like to request technical specifications")
+          ? val
+            ? `I would like to request technical specifications, commercial pricing, and delivery timeline for the ${val}.`
+            : ""
+          : prev.message,
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -72,7 +105,7 @@ export default function ModernContactForm({ initialMachine, className = "" }: Mo
         email: formData.email.trim(),
         phone: formData.phone.trim(),
         enquiryType: formData.enquiryType,
-        machineInterest: initialMachine || formData.enquiryType,
+        machineInterest: formData.machineInterest || initialMachine || "General Stone Machinery",
         message: formData.message.trim(),
         botField: formData.botField,
         _formLoadedAt: formLoadedAt,
@@ -107,7 +140,7 @@ export default function ModernContactForm({ initialMachine, className = "" }: Mo
   };
 
   const generateWhatsAppMessage = () => {
-    const text = `*New Contact Enquiry*\n*Name:* ${formData.name || "Customer"}\n*Company:* ${formData.companyName || "N/A"}\n*Email:* ${formData.email || "N/A"}\n*Phone:* ${formData.phone || "N/A"}\n*Enquiry Type:* ${formData.enquiryType}\n*Message:* ${formData.message || "Please connect regarding machinery specifications."}`;
+    const text = `*LN Engineering Enquiry*\n*Ref ID:* ${referenceId || "Direct Web Lead"}\n*Name:* ${formData.name || "Customer"}\n*Company:* ${formData.companyName || "N/A"}\n*Machine Interest:* ${formData.machineInterest || "General Stone Machinery"}\n*Enquiry Type:* ${formData.enquiryType}\n*Email:* ${formData.email || "N/A"}\n*Phone:* ${formData.phone || "N/A"}\n*Message:* ${formData.message || "Please provide machinery quotation."}`;
     return encodeURIComponent(text);
   };
 
@@ -129,33 +162,44 @@ export default function ModernContactForm({ initialMachine, className = "" }: Mo
           </h3>
           <p className="text-xs sm:text-sm text-[#A7ADB5] max-w-md mx-auto leading-relaxed">
             Your enquiry has been logged in our sales desk under Reference ID:{" "}
-            <code className="text-white bg-[#0A0B0D] border border-white/15 px-2.5 py-1 rounded-md font-mono text-xs inline-block mt-1">
+            <code className="text-white bg-[#0A0B0D] border border-white/15 px-2.5 py-1 rounded-md font-mono text-xs inline-block mt-1 font-bold">
               {referenceId}
             </code>
           </p>
         </div>
 
-        <div className="bg-[#0A0B0D] p-5 rounded-xl text-left text-xs space-y-2 max-w-md mx-auto border border-white/10">
+        <div className="bg-[#0A0B0D] p-5 rounded-xl text-left text-xs space-y-2.5 max-w-md mx-auto border border-white/10">
           <div className="text-zinc-400 uppercase tracking-wider font-semibold text-[10px] font-mono flex items-center justify-between border-b border-white/5 pb-2">
             <span>Enquiry Overview</span>
-            <span className="text-[#EF4444]">{formData.enquiryType}</span>
+            <span className="text-[#EF4444] font-bold">{formData.enquiryType}</span>
           </div>
           <div className="text-white font-medium truncate">
             {formData.companyName ? `${formData.companyName} • ` : ""}{formData.name}
           </div>
+          {formData.machineInterest && (
+            <div className="text-zinc-300 text-[11px] font-mono flex items-center gap-1.5 pt-0.5">
+              <span className="text-[#EF4444]">Machine Model:</span>
+              <span className="text-white font-semibold">{formData.machineInterest}</span>
+            </div>
+          )}
           <div className="text-[#A7ADB5] font-mono text-[11px]">
             {formData.email} {formData.phone ? `• ${formData.phone}` : ""}
           </div>
-          {emailDispatched && (
-            <div className="text-[#25D366] text-[11px] pt-1 flex items-center gap-1.5">
+          {emailDispatched ? (
+            <div className="text-[#25D366] text-[11px] pt-1.5 flex items-center gap-1.5 border-t border-white/5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#25D366]"></span>
               <span>Direct notification dispatched to LN Engineering sales engineers.</span>
+            </div>
+          ) : (
+            <div className="text-zinc-400 text-[11px] pt-1.5 flex items-center gap-1.5 border-t border-white/5">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span>Logged in factory sales registry. Direct engineer review within 1 business day.</span>
             </div>
           )}
         </div>
 
         <p className="text-xs text-[#A7ADB5] max-w-md mx-auto leading-relaxed">
-          Our engineering team in Rajsamand will review your inquiry and respond promptly.
+          Our engineering team at the Rajsamand manufacturing works will review your project details and prepare a technical proposal.
         </p>
 
         <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -178,6 +222,7 @@ export default function ModernContactForm({ initialMachine, className = "" }: Mo
                 email: "",
                 phone: "",
                 enquiryType: "Product enquiry",
+                machineInterest: "",
                 message: "",
                 botField: "",
               });
@@ -206,15 +251,15 @@ export default function ModernContactForm({ initialMachine, className = "" }: Mo
           </span>
           <h3 className="text-2xl font-bold text-white tracking-tight">We Already Have Your Details</h3>
           <p className="text-xs sm:text-sm text-[#A7ADB5] max-w-md mx-auto leading-relaxed">
-            An inquiry for <strong className="text-white">{formData.enquiryType}</strong> was recently submitted under Reference ID:{" "}
-            <code className="text-white bg-[#0A0B0D] border border-white/10 px-2.5 py-1 rounded-md font-mono text-xs inline-block mt-1">
+            An inquiry for <strong className="text-white">{formData.machineInterest || formData.enquiryType}</strong> was recently submitted under Reference ID:{" "}
+            <code className="text-white bg-[#0A0B0D] border border-white/10 px-2.5 py-1 rounded-md font-mono text-xs inline-block mt-1 font-bold">
               {referenceId}
             </code>
           </p>
         </div>
 
         <p className="text-xs text-[#A7ADB5] max-w-md mx-auto leading-relaxed">
-          Our engineering team is currently reviewing your project details. If your request is urgent, please connect directly with our technical director via WhatsApp.
+          Our engineering team is currently reviewing your project details. If your request is urgent, please connect directly with our technical sales desk via WhatsApp.
         </p>
 
         <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -247,9 +292,37 @@ export default function ModernContactForm({ initialMachine, className = "" }: Mo
           SEND US AN ENQUIRY
         </h2>
         <p className="text-xs sm:text-sm text-[#A7ADB5] leading-relaxed">
-          Tell us what you need. Our team will get back to you.
+          Tell us about your stone slicing or processing machinery requirements. Our engineering desk will prepare a technical proposal and quotation.
         </p>
       </div>
+
+      {/* Selected Model Indicator Banner */}
+      {formData.machineInterest && (
+        <div className="p-3.5 rounded-xl bg-[#EF4444]/10 border border-[#EF4444]/30 flex items-center justify-between text-xs">
+          <div className="flex items-center gap-2.5">
+            <span className="w-2 h-2 rounded-full bg-[#EF4444] animate-pulse shrink-0" />
+            <div>
+              <span className="text-zinc-400 font-mono text-[11px] block">Quotation Requested For:</span>
+              <span className="text-white font-semibold font-display uppercase tracking-wide">
+                {formData.machineInterest}
+              </span>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={() =>
+              setFormData((prev) => ({
+                ...prev,
+                machineInterest: "",
+                message: "",
+              }))
+            }
+            className="text-[11px] font-mono text-zinc-400 hover:text-white underline ml-3 shrink-0"
+          >
+            Clear / Select Other
+          </button>
+        </div>
+      )}
 
       <form onSubmit={handleSubmit} className="space-y-5" noValidate>
         {/* Anti-spam honeypot */}
@@ -351,35 +424,84 @@ export default function ModernContactForm({ initialMachine, className = "" }: Mo
           </div>
         </div>
 
-        {/* 5. Enquiry type dropdown */}
-        <div>
-          <label htmlFor="enquiryType" className="block text-xs font-mono uppercase tracking-wider text-white mb-2">
-            Enquiry Type <span className="text-[#EF4444]">*</span>
-          </label>
-          <div className="relative">
-            <select
-              id="enquiryType"
-              name="enquiryType"
-              value={formData.enquiryType}
-              onChange={handleChange}
-              className="w-full bg-[#0A0B0D] border border-white/10 hover:border-white/20 focus:border-[#C82032] text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-[#C82032] transition-colors appearance-none pr-10"
-            >
-              <option value="Product enquiry">Product enquiry</option>
-              <option value="Machinery quotation">Machinery quotation</option>
-              <option value="Technical support">Technical support</option>
-              <option value="Service request">Service request</option>
-              <option value="Spare parts">Spare parts</option>
-              <option value="Other">Other</option>
-            </select>
-            <div className="absolute inset-y-0 right-0 flex items-center pr-3.5 pointer-events-none text-zinc-400">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
+        {/* 5. Enquiry Type & 6. Machine Model Interest */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label htmlFor="enquiryType" className="block text-xs font-mono uppercase tracking-wider text-white mb-2">
+              Enquiry Type <span className="text-[#EF4444]">*</span>
+            </label>
+            <div className="relative">
+              <select
+                id="enquiryType"
+                name="enquiryType"
+                value={formData.enquiryType}
+                onChange={handleChange}
+                className="w-full bg-[#0A0B0D] border border-white/10 hover:border-white/20 focus:border-[#C82032] text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-[#C82032] transition-colors appearance-none pr-10"
+              >
+                <option value="Machinery quotation">Machinery quotation</option>
+                <option value="Product enquiry">Product enquiry</option>
+                <option value="Technical support">Technical support</option>
+                <option value="Service request">Service request</option>
+                <option value="Spare parts">Spare parts</option>
+                <option value="Tooling & Consumables">Tooling &amp; Consumables</option>
+                <option value="Other">Other</option>
+              </select>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-3.5 pointer-events-none text-zinc-400">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label htmlFor="machineInterest" className="block text-xs font-mono uppercase tracking-wider text-[#A7ADB5] mb-2">
+              Machine Model Interest <span className="text-zinc-600 font-normal lowercase">(optional)</span>
+            </label>
+            <div className="relative">
+              <select
+                id="machineInterest"
+                name="machineInterest"
+                value={formData.machineInterest}
+                onChange={handleMachineChange}
+                className="w-full bg-[#0A0B0D] border border-white/10 hover:border-white/20 focus:border-[#C82032] text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-[#C82032] transition-colors appearance-none pr-10"
+              >
+                <option value="">General Stone Machinery / Unspecified</option>
+                <optgroup label="Mono Wire Saw Machines">
+                  <option value="LN 2500 Mono Wire Saw">LN 2500 Mono Wire Saw (Base)</option>
+                  <option value="LN 2500 PRO Mono Wire Saw">LN 2500 PRO Mono Wire Saw (PLC)</option>
+                  <option value="LN 2500 PROMAXX Mono Wire Saw">LN 2500 PROMAXX Mono Wire Saw (Flagship + IoT)</option>
+                </optgroup>
+                <optgroup label="Multiwire Gangsaw Machines">
+                  <option value="LN 6 Wire Multiwire Saw">LN 6 Wire Multiwire Gangsaw (Thick Slab)</option>
+                  <option value="LN 12 Wire Multiwire Saw">LN 12 Wire Multiwire Gangsaw (Commercial Benchmark)</option>
+                  <option value="LN 22 Wire Multiwire Saw">LN 22 Wire Multiwire Gangsaw (High Yield Flagship)</option>
+                </optgroup>
+                <optgroup label="CNC Wire Profile Machines">
+                  <option value="LN HORI 2100">LN HORI 2100 (Arc Cutting up to 20 Ft)</option>
+                  <option value="LN CNC 2100 PROMAXX">LN CNC 2100 PROMAXX (Siemens CNC Contouring)</option>
+                </optgroup>
+                <optgroup label="Diamond Wire Rope & Tooling">
+                  <option value="LN Diamond Wire Rope">LN Diamond Wire Rope (35 Beads/M)</option>
+                  <option value="LN Diamond Wire Rope (Granite Sintered)">LN Diamond Wire Rope (Granite Sintered)</option>
+                  <option value="LN Diamond Wire Rope (Marble Electroplated)">LN Diamond Wire Rope (Marble Electroplated)</option>
+                  <option value="LN Diamond Wire Rope (Multiwire Thin Kerf)">LN Diamond Wire Rope (Multiwire Thin Kerf)</option>
+                </optgroup>
+                <optgroup label="Plant & Custom Engineering">
+                  <option value="Turnkey Stone Processing Line">Turnkey Stone Processing Line</option>
+                  <option value="Custom 50-Tonne Revolving Trolley">Custom 50-Tonne Revolving Trolley</option>
+                </optgroup>
+              </select>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-3.5 pointer-events-none text-zinc-400">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* 6. Message */}
+        {/* 7. Message */}
         <div>
           <label htmlFor="message" className="block text-xs font-mono uppercase tracking-wider text-white mb-2">
             Message <span className="text-[#EF4444]">*</span>
@@ -391,7 +513,7 @@ export default function ModernContactForm({ initialMachine, className = "" }: Mo
             rows={4}
             value={formData.message}
             onChange={handleChange}
-            placeholder="Tell us about your cutting requirements, stone variety, production targets, or required machinery parameters..."
+            placeholder="Tell us about your cutting requirements, stone variety (granite/marble), production targets, or required machinery parameters..."
             className="w-full bg-[#0A0B0D] border border-white/10 hover:border-white/20 focus:border-[#C82032] text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-[#C82032] transition-colors resize-y placeholder:text-zinc-600"
           ></textarea>
         </div>

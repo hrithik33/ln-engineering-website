@@ -7,7 +7,33 @@ interface ModelComparisonTableProps {
   models: ProductModel[];
   title?: string;
   subtitle?: string;
+  caption?: string;
+  ariaLabel?: string;
+  quoteSectionSubtitle?: string;
   className?: string;
+}
+
+function getModelTierBadge(modelId: string) {
+  switch (modelId) {
+    case "ln-2500-promaxx":
+      return { text: "Flagship + IoT", style: "bg-[#EF4444]/15 text-[#EF4444] border-[#EF4444]/30" };
+    case "ln-2500-pro":
+      return { text: "PLC Automation", style: "bg-white/10 text-white/90 border-white/10" };
+    case "ln-2500":
+      return { text: "Heavy-Duty Base", style: "bg-white/5 text-[#A7ADB5] border-white/5" };
+    case "ln-22-wire":
+      return { text: "Flagship (100 HP)", style: "bg-[#EF4444]/15 text-[#EF4444] border-[#EF4444]/30" };
+    case "ln-12-wire":
+      return { text: "Commercial Benchmark", style: "bg-white/10 text-white/90 border-white/10" };
+    case "ln-6-wire":
+      return { text: "Thick Slab Master", style: "bg-white/5 text-[#A7ADB5] border-white/5" };
+    case "ln-cnc-2100-promaxx":
+      return { text: "Siemens CNC (Flagship)", style: "bg-[#EF4444]/15 text-[#EF4444] border-[#EF4444]/30" };
+    case "ln-hori-2100":
+      return { text: "Industrial PLC Arc", style: "bg-white/10 text-white/90 border-white/10" };
+    default:
+      return { text: "Precision Standard", style: "bg-white/5 text-[#A7ADB5] border-white/5" };
+  }
 }
 
 /**
@@ -95,6 +121,9 @@ export default function ModelComparisonTable({
   models,
   title = "COMPARE MONO WIRE SAW MODELS",
   subtitle = "Side-by-side technical evaluation across all three 5th generation configurations to help you select the exact power, automation level, and telemetry for your stone processing line.",
+  caption,
+  ariaLabel,
+  quoteSectionSubtitle,
   className = "",
 }: ModelComparisonTableProps) {
   if (!models || models.length === 0) {
@@ -115,7 +144,7 @@ export default function ModelComparisonTable({
     <section
       id="compare-models"
       className={`bg-[#0E1012] border-t border-[#202326] py-16 sm:py-24 text-white ${className}`}
-      aria-label="Mono Wire Saw Model Comparison"
+      aria-label={ariaLabel || title}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading & Difference Legend */}
@@ -175,7 +204,9 @@ export default function ModelComparisonTable({
         {/* Responsive Comparison Table Container */}
         <div className="overflow-x-auto relative rounded-2xl border border-[#202326] bg-[#0E1012] shadow-2xl">
           <table className="w-full text-left border-separate border-spacing-0 min-w-[720px]">
-            <caption className="sr-only">Mono Wire Saw Model Technical Comparison Table</caption>
+            <caption className="sr-only">
+              {caption || `${title} Technical Comparison Table`}
+            </caption>
 
             {/* Table Header: Models side-by-side */}
             <thead>
@@ -200,8 +231,8 @@ export default function ModelComparisonTable({
 
                 {/* Model Column Headers */}
                 {models.map((model) => {
-                  const isFlagship = model.id === "ln-2500-promaxx";
-                  const isPro = model.id === "ln-2500-pro";
+                  const tier = getModelTierBadge(model.id);
+                  const isFlagship = tier.style.includes("#EF4444");
 
                   return (
                     <th
@@ -232,19 +263,11 @@ export default function ModelComparisonTable({
 
                       {/* Tier Badge */}
                       <div className="mb-1.5">
-                        {isFlagship ? (
-                          <span className="inline-block text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-[#EF4444]/15 text-[#EF4444] border border-[#EF4444]/30 font-semibold">
-                            Flagship + IoT
-                          </span>
-                        ) : isPro ? (
-                          <span className="inline-block text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-white/10 text-white/90 border border-white/10 font-semibold">
-                            PLC Automation
-                          </span>
-                        ) : (
-                          <span className="inline-block text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-white/5 text-[#A7ADB5] border border-white/5 font-semibold">
-                            Heavy-Duty Base
-                          </span>
-                        )}
+                        <span
+                          className={`inline-block text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded border font-semibold ${tier.style}`}
+                        >
+                          {tier.text}
+                        </span>
                       </div>
 
                       {/* Model Name */}
@@ -380,7 +403,8 @@ export default function ModelComparisonTable({
                 </th>
 
                 {models.map((model) => {
-                  const isFlagship = model.id === "ln-2500-promaxx";
+                  const tier = getModelTierBadge(model.id);
+                  const isFlagship = tier.style.includes("#EF4444");
 
                   return (
                     <td
@@ -418,13 +442,21 @@ export default function ModelComparisonTable({
               Request a Quotation for Your Production Line
             </h3>
             <p className="text-xs sm:text-sm text-[#A7ADB5] mt-1.5 leading-relaxed">
-              Select your preferred mono wire configuration to receive a comprehensive technical proposal, civil foundation layout, and FOB/CIF delivery timeline.
+              {quoteSectionSubtitle ||
+                "Select your preferred equipment configuration to receive a comprehensive technical proposal, civil foundation layout, and FOB/CIF delivery timeline."}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div
+            className={`grid gap-4 ${
+              models.length === 2
+                ? "grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto"
+                : "grid-cols-1 md:grid-cols-3"
+            }`}
+          >
             {models.map((model) => {
-              const isFlagship = model.id === "ln-2500-promaxx";
+              const tier = getModelTierBadge(model.id);
+              const isFlagship = tier.style.includes("#EF4444");
 
               return (
                 <div
@@ -440,15 +472,11 @@ export default function ModelComparisonTable({
                       <h4 className="font-display text-lg font-bold uppercase text-white">
                         {model.name}
                       </h4>
-                      {isFlagship ? (
-                        <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#EF4444]/15 text-[#EF4444] border border-[#EF4444]/30 font-semibold">
-                          Flagship
-                        </span>
-                      ) : (
-                        <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-white/5 text-[#7E8691] border border-white/5">
-                          {model.id === "ln-2500" ? "Base" : "Pro"}
-                        </span>
-                      )}
+                      <span
+                        className={`text-[10px] font-mono uppercase px-2 py-0.5 rounded border font-semibold ${tier.style}`}
+                      >
+                        {tier.text}
+                      </span>
                     </div>
                     <p className="text-xs text-[#A7ADB5] leading-relaxed mb-4">
                       {model.shortDescription}

@@ -35,6 +35,20 @@ const DESTINATIONS: Destination[] = [
     badge: "Works & HQ",
   },
   {
+    id: "in-south",
+    name: "South India (Regional Support Hubs)",
+    countryCode: "AP",
+    category: "home",
+    categoryLabel: "Regional Sales & Technical Hubs",
+    location: "Ongole & Martur Offices, Andhra Pradesh",
+    coordinates: { x: 578, y: 478 },
+    summary:
+      "Direct technical sales, engineering support, and rapid spare-parts distribution network for Andhra Pradesh, Telangana, Karnataka, and Tamil Nadu stone corridors.",
+    verifiedDetails:
+      "Offices at Aditya Towers, Ongole (C. Sivakothiah: +91 98664 48897) and Gannavaram Road, Martur (Somireddy Jaya Prakash: +91 99630 15990).",
+    badge: "Regional Hub",
+  },
+  {
     id: "eg",
     name: "Egypt",
     countryCode: "EG",
@@ -418,14 +432,28 @@ export default function GlobalWorldMap() {
                   Request International Quotation
                 </Link>
 
-                <a
-                  href="/documents/product-catalogue.pdf"
-                  download="LN_Engineering_Product_Catalogue.pdf"
-                  className="w-full py-2.5 px-4 bg-[#101112] hover:bg-white/5 border border-white/15 text-[#E8E5DF] text-xs font-mono rounded-xl transition-all duration-200 text-center block"
-                  aria-label="Download Product Catalogue (PDF, 41 MB)"
-                >
-                  Download Product Catalogue (PDF)
-                </a>
+                <div className="space-y-1.5 pt-1">
+                  <a
+                    href="/documents/ln-engineering-catalogue-optimized.pdf"
+                    download="LN_Engineering_Master_Catalogue.pdf"
+                    className="w-full py-2 px-3 bg-[#101112] hover:bg-white/5 border border-white/15 text-[#E8E5DF] text-xs font-mono rounded-xl transition-all duration-200 text-center flex items-center justify-center gap-2 group"
+                    aria-label="Download Master Catalogue (PDF, 3.8 MB)"
+                  >
+                    <svg className="w-3.5 h-3.5 text-[#EF4444]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5h-2v1.5h2c.55 0 1-.45 1-1s-.45-.5-1-.5zm0-3h-2v1.5h2c.55 0 1-.45 1-1s-.45-.5-1-.5zm5 4.5h-1.5v-4h1.5c.83 0 1.5.67 1.5 1.5v1c0 .83-.67 1.5-1.5 1.5zm4.5-2.5h-1.5v1h1.5v1.5h-1.5V14h-1.5V8.5h3v1.5z"/>
+                    </svg>
+                    <span>Master Catalogue (3.8 MB PDF)</span>
+                  </a>
+
+                  <a
+                    href="/documents/product-catalogue.pdf"
+                    download="LN_Engineering_Product_Catalogue.pdf"
+                    className="w-full py-1.5 px-3 bg-[#0B0C0E] hover:bg-white/5 border border-white/10 text-[#9CA3AF] text-[11px] font-mono rounded-xl transition-all duration-200 text-center block"
+                    aria-label="Download High-Resolution Print Edition (PDF, 41 MB)"
+                  >
+                    <span>Print Edition (41 MB PDF) &rarr;</span>
+                  </a>
+                </div>
               </div>
 
               <div className="text-[10px] font-mono text-[#9CA3AF] text-center pt-1">
